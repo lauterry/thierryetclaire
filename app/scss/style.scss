@@ -1,0 +1,71 @@
+$mobile: max-width 480px 6;
+
+.message {
+	color: white;
+	background-color: #27ae60;
+	padding: 20px 30px;
+}
+
+header {
+ 	@include fill-parent;
+	height: 400px;
+	background : red;
+	margin-bottom: 20px;
+
+	nav {
+		@include span-columns(8);
+		@include shift(2);
+		div {
+			@include span-columns(3);
+			@include shift(0);
+			margin-top: 20px;
+			background-color: orange;
+			height: 30px;
+			@include media($mobile) {
+				@include span-columns(6);
+			}
+		}
+	}
+
+	section	{
+		&:first-of-type {
+			@include span-columns(8);
+			@include shift(2);
+			height: 60px;
+			background-color: blue;
+			margin-top: 20px;
+
+			@include media($mobile) {
+				@include span-columns(6);
+				@include shift(0);
+				@include pad(5px 30px 5px 30px);
+			}
+		}
+
+		&:nth-child(3) {
+			@include span-columns(8);
+			@include shift(2);
+			height: 150px;
+			background-color: green;
+			margin-top: 20px;
+
+			@include media($mobile) {
+				@include span-columns(6);
+				@include shift(0);
+				@include pad(5px 30px 5px 30px);
+			}
+		}
+	}
+}
+
+.container {
+	@include outer-container;
+
+	.message {
+		@include span-columns(4);
+
+		@include media($mobile) {
+			@include span-columns(2);
+		}
+	}
+}
