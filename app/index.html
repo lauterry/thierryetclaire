@@ -4,42 +4,74 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <title>ThierryEtClaire</title>
+    <title>Thierry&Claire</title>
 
     <!-- build:css css/ThierryEtClaire.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="vendor/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="vendor/normalize-css/normalize.css"/>
     <!-- endbower -->
     <link rel="stylesheet" href="css/app.css"/>
     <!-- endbuild -->
-</head>
-<body  ng-controller="mainController">
 
-<header>
-    <section>
-        Claire et Thierry
-    </section>
-    <nav>
-            <div>Le Programme</div>
-            <div>Les Hotels</div>
-            <div>RSVP</div>
-            <div>Liste de mariage</div>
-    </nav>
-    <section>
-        12 h 5 min 12 sec
-    </section>
+    <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
+
+</head>
+<body ng-controller="mainController">
+
+<img class="left-picture" src="img/bonheur-kanji.png" alt="Bonheur"/>
+
+<header class="header">
+    <h1 class="header-title"> ❧ Claire & Thierry ☙</h1>
+    <div class="ribbon">
+        <div class="ribbon-stitches-top"></div>
+        <strong class="ribbon-content"><h1>~ le 13 Juin 2015 à Reims ~</h1></strong>
+        <div class="ribbon-stitches-bottom"></div>
+    </div>
 </header>
 
-<section class="container">
-    <section class="message"></section>
-    <section class="message"></section>
-    <section class="message"></section>
+<section class="card">
+    <header>
+        <h1 class="card-title"> ~ Les Mariés ~ </h1>
+    </header>
+    <section class="weds">
+        <article class="wed girl">
+            <img class="picture" src="img/claire-1.jpg" alt="Claire"/>
+            <p><span class="emphasis">Claire </span>est née à Reims le 20 mars 1989. Passionnée par les métiers de la Petite Enfance, elle obtient son diplôme d'Educatrice de Jeunes Enfants en 2013 avant d'intégrer une crèche à Vincennes où elle vit actuellement avec Thierry.</p>
+        </article>
+        <article class="wed boy">
+            <img class="picture" src="img/thierry-2.jpg" alt="Thierry"/>
+            <p><span class="emphasis">Thierry </span> est né en Nouvelle-Calédonie le 28 mars 1986 de parents d'origine Chinoise. Il quitte son île en 2006 pour intégrer une Grande Ecole d'Ingénieur à Paris. Aujourd'hui Thierry est passionné par les technologies du Web et travaille actuellement sur Paris en tant que développeur.</p>
+        </article>
+    </section>
 </section>
+
+<div class="dot_line">
+    <div class="lines_dot">
+        <div class="icon">♡</div>
+    </div>
+</div>
+
+<section class="card">
+    <header>
+        <h1 class="card-title"> ~ Programme ~ </h1>
+    </header>
+    <article class="card-content">
+        <header class="card-content-header">
+            <h2 class="title">Cérémonie à l'Eglise de Bezannes</h2>
+            <h3 class="time">11H00</h3>
+            <h4 class="location">22 Rue de l'Ancien Château
+                51430 Bezannes</h4>
+        </header>
+        <img class="card-right picture" src="http://www.mairie-ormes.fr/Public/Fichiers/Ressources/33/EGLISE1.JPG" alt="Eglise de Bezannes"/>
+        <div class="card-left picture" id="map-canvas"/>
+    </article>
+</section>
+
+
 
 <footer>
 
 </footer>
-
 
 <!-- build:js js/ThierryEtClaire.js -->
 <!-- bower:js -->
@@ -49,6 +81,21 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers/mainController.js"></script>
 <!-- endbuild -->
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
+</script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(-34.397, 150.644),
+            zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+                mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 </body>
 </html>

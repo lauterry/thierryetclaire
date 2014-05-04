@@ -1,71 +1,204 @@
+@charset "UTF-8";
+
 $mobile: max-width 480px 6;
+$large-screen: min-width 768px;
 
-.message {
-	color: white;
-	background-color: #27ae60;
-	padding: 20px 30px;
+body {
+	background: url('../img/bg_3.jpg');
 }
 
-header {
- 	@include fill-parent;
-	height: 400px;
-	background : red;
-	margin-bottom: 20px;
+.left-picture {
+	position: absolute;
+	float: left;
+	height: 200px;
+	top: 30px;
+	left: 50px;
+	border: 3px solid #ffffff;
+	border-radius: 150px;
+	padding: 10px;
+	@include transform(rotate(-20deg));
 
-	nav {
-		@include span-columns(8);
-		@include shift(2);
-		div {
-			@include span-columns(3);
-			@include shift(0);
-			margin-top: 20px;
-			background-color: orange;
-			height: 30px;
-			@include media($mobile) {
-				@include span-columns(6);
-			}
-		}
-	}
-
-	section	{
-		&:first-of-type {
-			@include span-columns(8);
-			@include shift(2);
-			height: 60px;
-			background-color: blue;
-			margin-top: 20px;
-
-			@include media($mobile) {
-				@include span-columns(6);
-				@include shift(0);
-				@include pad(5px 30px 5px 30px);
-			}
-		}
-
-		&:nth-child(3) {
-			@include span-columns(8);
-			@include shift(2);
-			height: 150px;
-			background-color: green;
-			margin-top: 20px;
-
-			@include media($mobile) {
-				@include span-columns(6);
-				@include shift(0);
-				@include pad(5px 30px 5px 30px);
-			}
-		}
+	@include media($mobile) {
+		display: none;
 	}
 }
 
-.container {
+.header {
 	@include outer-container;
+	position: relative;
+	text-align: center;
+	color: white;
+	@include ribbon(60%, 40px);
 
-	.message {
-		@include span-columns(4);
+	.header-title {
+		font-size: 90px;
+		margin:	50px 50px 20px;
 
 		@include media($mobile) {
-			@include span-columns(2);
+			font-size: 50px;
 		}
 	}
+}
+
+hr {
+	margin: 50px;
+	width: 90%;
+	height: 3px;
+	border: none;
+	background: white;
+	text-align: center;
+	opacity: 0.5;
+}
+
+.card {
+	&:first-of-type {
+		margin-top: 150px;
+
+		@include media($mobile) {
+			margin-top: 100px;
+
+		}
+
+	}
+	@include outer-container;
+	background: white url('../img/frenchstucco.png');
+	height: 100%;
+	box-shadow: 0 2px 10px #333;
+	text-align: center;
+	padding: 20px;
+
+	.card-title {
+		font-size: 80px;
+		margin: 10px 0 40px;
+
+		@include media($mobile) {
+			font-size: 40px;
+			margin:	10px 50px 20px;
+		}
+	}
+
+	.card-content {
+		@include span-columns(10);
+		@include shift(1);
+
+		.card-content-header {
+			margin: 20px 0;
+
+			.title {
+
+			}
+
+			.time {
+			}
+
+			.location {
+			}
+		}
+
+		.card-right {
+			@include span-columns(5);
+			float: right;
+			@include media($mobile) {
+				@include span-columns(6);
+				float: none;
+				margin-bottom: 20px;
+			}
+		}
+
+		.card-left {
+			@include span-columns(5);
+			@include media($mobile) {
+				@include span-columns(6);
+				float: none;
+				margin-bottom: 20px;
+			}
+		}
+
+		.picture {
+			border: 3px solid #333;
+			height: 350px;
+		}
+	}
+
+	.weds {
+		@include span-columns(10);
+		@include shift(1);
+		text-align: center;
+
+		.wed {
+			@include span-columns(5 of 10);
+			font-size: 19px;
+			line-height: 30px;
+
+			&.girl {
+				img {
+					float: right;
+					margin-left: 10px;
+				}
+			}
+
+			&.boy {
+				img {
+					float: left;
+					margin-right: 10px;
+				}
+			}
+
+			.emphasis {
+				font-size: 50px;
+				font-weight: bold;
+				color: #377b00;
+			}
+
+			.picture {
+				border-radius: 150px;
+				border: 3px solid white;
+				height: 245px;
+			}
+
+			@include media($mobile) {
+				@include span-columns(6);
+				text-align: center;
+				margin-bottom: 20px;
+
+				&.girl {
+					img {
+						float: none;
+					}
+				}
+
+				&.boy {
+					img {
+						float: none;
+					}
+				}
+			}
+
+		}
+	}
+
+}
+
+.dot_line {
+	@include outer-container;
+	clear: both;
+	width: 70%;
+	margin: 50px auto;
+
+
+	.lines_dot {
+		background-image: url(http://www.cmsandblogtemplates.com/tf/Wedding_Slide/v_2_0/images/dot_line.png);
+		background-repeat: repeat-x;
+		background-position: left center;
+		padding: 10px 0px;
+		height: 26px;
+		width: 100%;
+	}
+
+	.icon {
+		font-size: 40px;
+		color: white;
+		text-align: center;
+	}
+
 }
