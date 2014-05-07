@@ -547,6 +547,14 @@ body {
 }
 .card .program {
   padding: 0 50px 0 50px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.card .program:last-child {
+  margin-right: 0;
 }
 .card .program .program-content {
   float: left;
@@ -560,25 +568,19 @@ body {
 .card .program .program-content .program-header {
   color: #81305B;
 }
+.card .program .program-content .program-text {
+  margin-bottom: 20px;
+}
 .card .program .program-content .program-text, .card .program .program-content .program-header {
   text-align: left;
 }
-.card .program .program-content .program-address {
+.card .program .program-content .program-time, .card .program .program-content .program-address {
   float: left;
   display: block;
   margin-right: 4.82916%;
   width: 47.58542%;
 }
-.card .program .program-content .program-address:last-child {
-  margin-right: 0;
-}
-.card .program .program-content .program-time {
-  float: left;
-  display: block;
-  margin-right: 4.82916%;
-  width: 47.58542%;
-}
-.card .program .program-content .program-time:last-child {
+.card .program .program-content .program-time:last-child, .card .program .program-content .program-address:last-child {
   margin-right: 0;
 }
 .card .program .program-content .program-title.small {
@@ -595,13 +597,90 @@ body {
 .card .program .program-map:last-child {
   margin-right: 0;
 }
+@media screen and (max-width: 768px) {
+  .card .program .program-map {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .card .program .program-map:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card .program {
+    padding: 0 0 0 0;
+  }
+  .card .program .program-content {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .card .program .program-content:last-child {
+    margin-right: 0;
+  }
+  .card .program .program-content .program-time, .card .program .program-content .program-address {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card .program .program-content .program-time:last-child, .card .program .program-content .program-address:last-child {
+    margin-right: 0;
+  }
+  .card .program .program-map {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+  }
+  .card .program .program-map:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card .program {
+    padding: 0 0 0 0;
+  }
+  .card .program .program-content {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+  }
+  .card .program .program-content:last-child {
+    margin-right: 0;
+  }
+  .card .program .program-content .program-time, .card .program .program-content .program-address {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card .program .program-content .program-time:last-child, .card .program .program-content .program-address:last-child {
+    margin-right: 0;
+  }
+  .card .program .program-map {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+  }
+  .card .program .program-map:last-child {
+    margin-right: 0;
+  }
+}
 
 .ico {
   height: 25px;
 }
 
 .map {
-  height: 250px;
+  height: 300px;
   border: 5px solid #545454;
 }
 

@@ -142,22 +142,24 @@ body {
 
 	.program {
 		@include pad(0 50px 0 50px);
+		@include span-columns(12);
+		margin-bottom: 100px;
+
 		.program-content {
 			@include span-columns(6);
 			.program-header {
 				color: #81305B;
 			}
 
+			.program-text {
+				margin-bottom: 20px;
+			}
+
 			.program-text, .program-header {
 				text-align: left;
 			}
 
-			.program-address {
-				@include span-columns(3 of 6);
-
-			}
-
-			.program-time {
+			.program-time, .program-address  {
 				@include span-columns(3 of 6);
 			}
 
@@ -170,11 +172,50 @@ body {
 
 		.program-map {
 			@include span-columns(6);
+			@include media($mobile){
+				@include span-columns(6);
+			}
 		}
 
 	}
-	
 
+	@include media($mobile) {
+		.program {
+			@include pad(0 0 0 0);
+
+			.program-content {
+				@include span-columns(6);
+				.program-time, .program-address {
+					@include span-columns(6);
+					margin-bottom : 20px;
+				}
+			}
+
+			.program-map {
+				@include span-columns(6);
+			}
+
+		}
+	}
+
+	@include media($tablet) {
+		.program {
+			@include pad(0 0 0 0);
+
+			.program-content {
+				@include span-columns(8);
+				.program-time, .program-address {
+					@include span-columns(8);
+					margin-bottom : 20px;
+				}
+			}
+
+			.program-map {
+				@include span-columns(8);
+			}
+
+		}
+	}
 
 }
 
@@ -183,7 +224,7 @@ body {
 }
 
 .map {
-	height: 250px;
+	height: 300px;
 	border: 5px solid #545454;
 }
 
