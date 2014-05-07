@@ -47,7 +47,7 @@ input[type="submit"]:disabled {
 
 body {
   color: #333333;
-  font-family: "Montez", cursive;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1em;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5em;
@@ -160,7 +160,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Montez", cursive;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1em;
 }
 
@@ -188,7 +188,7 @@ select[multiple=multiple] {
   border-radius: 0.1875em;
   border: 1px solid #dddddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-  font-family: "Montez", cursive;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em 0.5em;
@@ -290,25 +290,14 @@ dl dd {
 body {
   background: url("../img/bg_3.jpg");
 }
-
-.left-picture {
-  position: absolute;
-  float: left;
-  height: 200px;
-  top: 30px;
-  left: 50px;
-  border: 3px solid #ffffff;
-  border-radius: 150px;
-  padding: 10px;
-  -webkit-transform: rotate(-20deg);
-  -moz-transform: rotate(-20deg);
-  -ms-transform: rotate(-20deg);
-  -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    font-size: 1.5em;
+  }
 }
-@media screen and (max-width: 480px) {
-  .left-picture {
-    display: none;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1.5em;
   }
 }
 
@@ -319,6 +308,7 @@ body {
   position: relative;
   text-align: center;
   color: white;
+  margin-bottom: 150px;
 }
 .header:after {
   content: "";
@@ -352,7 +342,7 @@ body {
   margin: 0px;
   padding: 5px 10px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .header .ribbon h1 {
     font-size: 20px !important;
   }
@@ -414,23 +404,18 @@ body {
   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
 }
 .header .header-title {
-  font-size: 90px;
+  font-size: 100px;
   margin: 50px 50px 20px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .header .header-title {
     font-size: 50px;
   }
 }
-
-hr {
-  margin: 50px;
-  width: 90%;
-  height: 3px;
-  border: none;
-  background: white;
-  text-align: center;
-  opacity: 0.5;
+@media screen and (max-width: 768px) {
+  .header {
+    margin-bottom: 100px;
+  }
 }
 
 .card {
@@ -443,14 +428,6 @@ hr {
   text-align: center;
   padding: 20px;
 }
-.card:first-of-type {
-  margin-top: 150px;
-}
-@media screen and (max-width: 480px) {
-  .card:first-of-type {
-    margin-top: 100px;
-  }
-}
 .card:after {
   content: "";
   display: table;
@@ -460,73 +437,17 @@ hr {
   font-size: 80px;
   margin: 10px 0 40px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .card .card-title {
-    font-size: 40px;
+    font-size: 70px;
     margin: 10px 50px 20px;
   }
 }
-.card .card-content {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
-}
-.card .card-content:last-child {
-  margin-right: 0;
-}
-.card .card-content .card-content-header {
-  margin: 20px 0;
-}
-.card .card-content .card-right {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-  float: right;
-}
-.card .card-content .card-right:last-child {
-  margin-right: 0;
-}
-@media screen and (max-width: 480px) {
-  .card .card-content .card-right {
-    float: left;
-    display: block;
-    margin-right: 4.82916%;
-    width: 100%;
-    float: none;
-    margin-bottom: 20px;
+@media screen and (max-width: 768px) {
+  .card .card-title {
+    font-size: 50px;
+    margin: 10px 0 20px;
   }
-  .card .card-content .card-right:last-child {
-    margin-right: 0;
-  }
-}
-.card .card-content .card-left {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%;
-}
-.card .card-content .card-left:last-child {
-  margin-right: 0;
-}
-@media screen and (max-width: 480px) {
-  .card .card-content .card-left {
-    float: left;
-    display: block;
-    margin-right: 4.82916%;
-    width: 100%;
-    float: none;
-    margin-bottom: 20px;
-  }
-  .card .card-content .card-left:last-child {
-    margin-right: 0;
-  }
-}
-.card .card-content .picture {
-  border: 3px solid #333;
-  height: 350px;
 }
 .card .weds {
   float: left;
@@ -544,7 +465,6 @@ hr {
   display: block;
   margin-right: 2.84259%;
   width: 48.57871%;
-  font-size: 19px;
   line-height: 30px;
 }
 .card .weds .wed:last-child {
@@ -558,8 +478,9 @@ hr {
   float: left;
   margin-right: 10px;
 }
-.card .weds .wed .emphasis {
-  font-size: 50px;
+.card .weds .wed .lettrine {
+  font-family: "Montez", cursive;
+  font-size: 40px;
   font-weight: bold;
   color: #377b00;
 }
@@ -568,7 +489,44 @@ hr {
   border: 3px solid white;
   height: 245px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card .weds .wed .picture {
+    height: 270px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .card .weds .wed {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .card .weds .wed:last-child {
+    margin-right: 0;
+  }
+  .card .weds .wed img {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 35.26334%;
+    float: none;
+    margin: 0;
+  }
+  .card .weds .wed img:last-child {
+    margin-right: 0;
+  }
+  .card .weds .wed p {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 61.158%;
+  }
+  .card .weds .wed p:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
   .card .weds .wed {
     float: left;
     display: block;
@@ -602,15 +560,49 @@ hr {
   clear: both;
 }
 .dot_line .lines_dot {
-  background-image: url(http://www.cmsandblogtemplates.com/tf/Wedding_Slide/v_2_0/images/dot_line.png);
-  background-repeat: repeat-x;
-  background-position: left center;
+  background: url(http://www.cmsandblogtemplates.com/tf/Wedding_Slide/v_2_0/images/dot_line.png) repeat-x left center;
   padding: 10px 0px;
   height: 26px;
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .dot_line .lines_dot {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dot_line .lines_dot {
+    padding: 0;
+  }
 }
 .dot_line .icon {
   font-size: 40px;
   color: white;
   text-align: center;
+}
+
+.left-picture {
+  position: absolute;
+  float: left;
+  height: 200px;
+  top: 30px;
+  left: 50px;
+  border: 3px solid #ffffff;
+  border-radius: 150px;
+  padding: 10px;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .left-picture {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left-picture {
+    display: none;
+  }
 }

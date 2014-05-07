@@ -1,26 +1,19 @@
 @charset "UTF-8";
 
-$mobile: max-width 480px 6;
-$large-screen: min-width 768px;
+$mobile: max-width 768px 6;
+$tablet: min-width 768px max-width 992px 8;
 
 body {
 	background: url('../img/bg_3.jpg');
-}
 
-.left-picture {
-	position: absolute;
-	float: left;
-	height: 200px;
-	top: 30px;
-	left: 50px;
-	border: 3px solid #ffffff;
-	border-radius: 150px;
-	padding: 10px;
-	@include transform(rotate(-20deg));
+	@include media($tablet) {
+		font-size : $base-font-size * 1.5;
+	}
 
 	@include media($mobile) {
-		display: none;
+		font-size : $base-font-size * 1.5;
 	}
+
 }
 
 .header {
@@ -31,35 +24,23 @@ body {
 	@include ribbon(60%, 40px);
 
 	.header-title {
-		font-size: 90px;
+		font-size: 100px;
 		margin:	50px 50px 20px;
 
 		@include media($mobile) {
 			font-size: 50px;
 		}
 	}
-}
 
-hr {
-	margin: 50px;
-	width: 90%;
-	height: 3px;
-	border: none;
-	background: white;
-	text-align: center;
-	opacity: 0.5;
+	margin-bottom: 150px;
+
+	@include media($mobile) {
+		margin-bottom: 100px;
+
+	}
 }
 
 .card {
-	&:first-of-type {
-		margin-top: 150px;
-
-		@include media($mobile) {
-			margin-top: 100px;
-
-		}
-
-	}
 	@include outer-container;
 	background: white url('../img/frenchstucco.png');
 	height: 100%;
@@ -71,53 +52,16 @@ hr {
 		font-size: 80px;
 		margin: 10px 0 40px;
 
-		@include media($mobile) {
-			font-size: 40px;
+		@include media($tablet) {
+			font-size: 70px;
 			margin:	10px 50px 20px;
 		}
-	}
 
-	.card-content {
-		@include span-columns(10);
-		@include shift(1);
-
-		.card-content-header {
-			margin: 20px 0;
-
-			.title {
-
-			}
-
-			.time {
-			}
-
-			.location {
-			}
+		@include media($mobile) {
+			font-size: 50px;
+			margin:	10px 0 20px;
 		}
 
-		.card-right {
-			@include span-columns(5);
-			float: right;
-			@include media($mobile) {
-				@include span-columns(6);
-				float: none;
-				margin-bottom: 20px;
-			}
-		}
-
-		.card-left {
-			@include span-columns(5);
-			@include media($mobile) {
-				@include span-columns(6);
-				float: none;
-				margin-bottom: 20px;
-			}
-		}
-
-		.picture {
-			border: 3px solid #333;
-			height: 350px;
-		}
 	}
 
 	.weds {
@@ -127,7 +71,6 @@ hr {
 
 		.wed {
 			@include span-columns(5 of 10);
-			font-size: 19px;
 			line-height: 30px;
 
 			&.girl {
@@ -144,8 +87,9 @@ hr {
 				}
 			}
 
-			.emphasis {
-				font-size: 50px;
+			.lettrine {
+				font-family: $header-font-family;
+				font-size: 40px;
 				font-weight: bold;
 				color: #377b00;
 			}
@@ -154,6 +98,23 @@ hr {
 				border-radius: 150px;
 				border: 3px solid white;
 				height: 245px;
+				@include media($tablet) {
+					height: 270px;
+				}
+			}
+
+			@include media($tablet) {
+				@include span-columns(8);
+				margin-bottom: 50px;
+
+				img {
+					@include span-columns(3);
+					float: none;
+					margin: 0;
+				}
+				p {
+					@include span-columns(5);
+				}
 			}
 
 			@include media($mobile) {
@@ -179,6 +140,9 @@ hr {
 
 }
 
+
+// HONRIZONTAL SEPARATOR
+
 .dot_line {
 	@include outer-container;
 	clear: both;
@@ -187,12 +151,18 @@ hr {
 
 
 	.lines_dot {
-		background-image: url(http://www.cmsandblogtemplates.com/tf/Wedding_Slide/v_2_0/images/dot_line.png);
-		background-repeat: repeat-x;
-		background-position: left center;
+		background: url(http://www.cmsandblogtemplates.com/tf/Wedding_Slide/v_2_0/images/dot_line.png) repeat-x left center;
 		padding: 10px 0px;
 		height: 26px;
 		width: 100%;
+
+		@include media($tablet) {
+			padding: 0;
+		}
+
+		@include media($mobile) {
+			padding: 0;
+		}
 	}
 
 	.icon {
@@ -201,4 +171,28 @@ hr {
 		text-align: center;
 	}
 
+}
+
+
+
+// TOP PICTURE
+
+.left-picture {
+	position: absolute;
+	float: left;
+	height: 200px;
+	top: 30px;
+	left: 50px;
+	border: 3px solid #ffffff;
+	border-radius: 150px;
+	padding: 10px;
+	@include transform(rotate(-20deg));
+
+	@include media($tablet) {
+		display: none;
+	}
+
+	@include media($mobile) {
+		display: none;
+	}
 }
