@@ -290,7 +290,7 @@ dl dd {
 body {
   background: url("../img/bg_3.jpg");
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   body {
     font-size: 1.5em;
   }
@@ -437,7 +437,7 @@ body {
   font-size: 80px;
   margin: 10px 0 40px;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .card .card-title {
     font-size: 70px;
     margin: 10px 50px 20px;
@@ -470,13 +470,23 @@ body {
 .card .weds .wed:last-child {
   margin-right: 0;
 }
-.card .weds .wed.girl img {
-  float: right;
-  margin-left: 10px;
+.card .weds .wed .picture {
+  border-radius: 150px;
+  border: 3px solid white;
+  height: 245px;
+  margin: 0 20px;
 }
-.card .weds .wed.boy img {
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card .weds .wed .picture {
+    height: 270px;
+    margin: 0 10px;
+  }
+}
+.card .weds .wed.girl .picture {
+  float: right;
+}
+.card .weds .wed.boy .picture {
   float: left;
-  margin-right: 10px;
 }
 .card .weds .wed .lettrine {
   font-family: "Montez", cursive;
@@ -484,17 +494,7 @@ body {
   font-weight: bold;
   color: #377b00;
 }
-.card .weds .wed .picture {
-  border-radius: 150px;
-  border: 3px solid white;
-  height: 245px;
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .card .weds .wed .picture {
-    height: 270px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .card .weds .wed {
     float: left;
     display: block;
@@ -505,7 +505,7 @@ body {
   .card .weds .wed:last-child {
     margin-right: 0;
   }
-  .card .weds .wed img {
+  .card .weds .wed .picture {
     float: left;
     display: block;
     margin-right: 3.57866%;
@@ -513,7 +513,7 @@ body {
     float: none;
     margin: 0;
   }
-  .card .weds .wed img:last-child {
+  .card .weds .wed .picture:last-child {
     margin-right: 0;
   }
   .card .weds .wed p {
@@ -538,12 +538,71 @@ body {
   .card .weds .wed:last-child {
     margin-right: 0;
   }
-  .card .weds .wed.girl img {
+  .card .weds .wed.girl .picture {
     float: none;
   }
-  .card .weds .wed.boy img {
+  .card .weds .wed.boy .picture {
     float: none;
   }
+}
+.card .program {
+  padding: 0 50px 0 50px;
+}
+.card .program .program-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+.card .program .program-content:last-child {
+  margin-right: 0;
+}
+.card .program .program-content .program-header {
+  color: #81305B;
+}
+.card .program .program-content .program-text, .card .program .program-content .program-header {
+  text-align: left;
+}
+.card .program .program-content .program-address {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+}
+.card .program .program-content .program-address:last-child {
+  margin-right: 0;
+}
+.card .program .program-content .program-time {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 47.58542%;
+}
+.card .program .program-content .program-time:last-child {
+  margin-right: 0;
+}
+.card .program .program-content .program-title.small {
+  font-size: 1em;
+  font-weight: bolder;
+  color: #545454;
+}
+.card .program .program-map {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+.card .program .program-map:last-child {
+  margin-right: 0;
+}
+
+.ico {
+  height: 25px;
+}
+
+.map {
+  height: 250px;
+  border: 5px solid #545454;
 }
 
 .dot_line {
@@ -565,7 +624,7 @@ body {
   height: 26px;
   width: 100%;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .dot_line .lines_dot {
     padding: 0;
   }
@@ -596,7 +655,7 @@ body {
   -o-transform: rotate(-20deg);
   transform: rotate(-20deg);
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
   .left-picture {
     display: none;
   }

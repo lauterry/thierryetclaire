@@ -56,6 +56,31 @@
     <header>
         <h1 class="card-title"> ~ Programme ~ </h1>
     </header>
+	<section class="program">
+		<section class="program-content">
+			<h2 class="program-header">Cérémonie civile</h2>
+			<p class="program-text">Bezannes est une commune française, située dans le département de la Marne et la région Champagne-Ardenne.
+				Elle fait partie de la communauté d'agglomération Reims Métropole.
+				Ses habitants sont appelés les Bezannais. Elle fait partie des villes fleuries de France avec 3 fleurs.</p>
+			<div class="program-address">
+				<img class="ico" src="img/pin.png" alt="pin"/>
+				<span class="program-title small">Mairie de Bezannes</span>
+				<div>
+					<div>1 rue Source de Muire</div>
+					<div>51726 Bezannes Cédex</div>
+				</div>
+			</div>
+			<div class="program-time">
+				<img class="ico" src="img/clock.png" alt="clock"/>
+				<span class="program-title small">Samedi 13 Juin 2015</span>
+				<div>11H30</div>
+			</div>
+		</section>
+		<section class="program-map">
+			<div id="js-ceremonie-civile-map" class="map"></div>
+		</section>
+	</section>
+
 </section>
 
 
@@ -77,13 +102,23 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 <script type="text/javascript">
+
+	var mairieBezannesPoints = new google.maps.LatLng(49.2201195, 3.9859497);
+
     function initialize() {
         var mapOptions = {
-            center: new google.maps.LatLng(-34.397, 150.644),
-            zoom: 8
+            center: mairieBezannesPoints,
+            zoom: 11
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
+
+        var map = new google.maps.Map(document.getElementById("js-ceremonie-civile-map"),
                 mapOptions);
+
+		var marker = new google.maps.Marker({
+			position: mairieBezannesPoints,
+			map: map,
+			title: 'Mairie de Bezannes'
+		});
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
