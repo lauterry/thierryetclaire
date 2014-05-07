@@ -65,12 +65,12 @@ body {
 	}
 
 	.weds {
-		@include span-columns(10);
-		@include shift(1);
+		@include pad(0 50px 0 50px);
+		@include span-columns(12);
 		text-align: center;
 
 		.wed {
-			@include span-columns(5 of 10);
+			@include span-columns(6 of 12);
 			line-height: 30px;
 
 			.picture {
@@ -205,7 +205,7 @@ body {
 			.program-content {
 				@include span-columns(8);
 				.program-time, .program-address {
-					@include span-columns(8);
+					@include span-columns(4);
 					margin-bottom : 20px;
 				}
 			}

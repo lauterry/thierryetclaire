@@ -450,11 +450,11 @@ body {
   }
 }
 .card .weds {
+  padding: 0 50px 0 50px;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
+  width: 100%;
   text-align: center;
 }
 .card .weds:last-child {
@@ -463,8 +463,8 @@ body {
 .card .weds .wed {
   float: left;
   display: block;
-  margin-right: 2.84259%;
-  width: 48.57871%;
+  margin-right: 2.35765%;
+  width: 48.82117%;
   line-height: 30px;
 }
 .card .weds .wed:last-child {
@@ -658,7 +658,7 @@ body {
     float: left;
     display: block;
     margin-right: 3.57866%;
-    width: 100%;
+    width: 48.21067%;
     margin-bottom: 20px;
   }
   .card .program .program-content .program-time:last-child, .card .program .program-content .program-address:last-child {
