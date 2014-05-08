@@ -1,5 +1,6 @@
 angular.module('ThierryEtClaire', [
-    'ngTouch'
+    'ngTouch',
+	'google-maps'
 ]);
 
 

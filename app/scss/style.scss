@@ -7,11 +7,11 @@ body {
 	background: url('../img/bg_3.jpg');
 
 	@include media($tablet) {
-		font-size : $base-font-size * 1.5;
+		font-size : $base-font-size * 1.2;
 	}
 
 	@include media($mobile) {
-		font-size : $base-font-size * 1.5;
+		font-size : $base-font-size * 1.2;
 	}
 }
 
@@ -20,7 +20,7 @@ body {
 	height: 25px;
 }
 
-.map {
+.angular-google-map-container {
 	height: 300px;
 	border: 5px solid #545454;
 }
@@ -208,9 +208,13 @@ body {
 	@include media($mobile) {
 		.program {
 			@include pad(0 0 0 0);
+			margin-bottom: 40px;
 
 			.program-content {
 				@include span-columns(6);
+				.program-text, .program-header {
+					text-align: center;
+				}
 				.program-time, .program-address {
 					@include span-columns(6);
 					margin-bottom : 20px;
@@ -227,9 +231,12 @@ body {
 	@include media($tablet) {
 		.program {
 			@include pad(0 0 0 0);
-
+			margin-bottom: 40px;
 			.program-content {
 				@include span-columns(8);
+				.program-text, .program-header {
+					text-align: center;
+				}
 				.program-time, .program-address {
 					@include span-columns(4);
 					margin-bottom : 20px;

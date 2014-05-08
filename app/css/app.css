@@ -21,7 +21,7 @@ input[type="submit"] {
   text-shadow: 0 1px 0 #1b4f9a;
   background-clip: padding-box;
   -webkit-font-smoothing: antialiased;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: bold;
   line-height: 1em;
 }
@@ -48,9 +48,9 @@ input[type="submit"]:disabled {
 body {
   color: #333333;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5em;
+  line-height: 1.65em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,31 +61,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2.475em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 
 h3 {
-  font-size: 1.75em;
+  font-size: 1.925em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.65em;
 }
 
 h5 {
-  font-size: 1.25em;
+  font-size: 1.375em;
 }
 
 h6 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 p {
-  margin: 0 0 0.75em;
+  margin: 0 0 0.825em;
 }
 
 a {
@@ -108,7 +108,7 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: 1.5em 0;
+  margin: 1.65em 0;
 }
 
 img {
@@ -123,11 +123,11 @@ abbr, acronym {
 
 address {
   display: block;
-  margin: 0 0 0.75em;
+  margin: 0 0 0.825em;
 }
 
 hgroup {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.825em;
 }
 
 del {
@@ -137,8 +137,8 @@ del {
 blockquote {
   border-left: 2px solid #dddddd;
   color: #595959;
-  margin: 1.5em 0;
-  padding-left: 0.75em;
+  margin: 1.65em 0;
+  padding-left: 0.825em;
 }
 
 cite {
@@ -152,8 +152,8 @@ cite:before {
 fieldset {
   background: #f7f7f7;
   border: 1px solid #dddddd;
-  margin: 0 0 0.75em 0;
-  padding: 1.5em;
+  margin: 0 0 0.825em 0;
+  padding: 1.65em;
 }
 
 input,
@@ -161,12 +161,12 @@ label,
 select {
   display: block;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 label {
   font-weight: bold;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.4125em;
 }
 label.required:after {
   content: "*";
@@ -189,9 +189,9 @@ select[multiple=multiple] {
   border: 1px solid #dddddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1em;
-  margin-bottom: 0.75em;
-  padding: 0.5em 0.5em;
+  font-size: 1.1em;
+  margin-bottom: 0.825em;
+  padding: 0.55em 0.55em;
   width: 100%;
 }
 textarea:hover,
@@ -221,7 +221,7 @@ input[type="search"] {
 
 input[type="checkbox"], input[type="radio"] {
   display: inline;
-  margin-right: 0.375em;
+  margin-right: 0.4125em;
 }
 
 input[type="file"] {
@@ -231,7 +231,7 @@ input[type="file"] {
 select {
   width: auto;
   max-width: 100%;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.65em;
 }
 
 button,
@@ -249,7 +249,7 @@ input[type="submit"] {
 
 table {
   border-collapse: collapse;
-  margin: 0.75em 0;
+  margin: 0.825em 0;
   table-layout: fixed;
   width: 100%;
 }
@@ -257,13 +257,13 @@ table {
 th {
   border-bottom: 1px solid #b7b7b7;
   font-weight: bold;
-  padding: 0.75em 0;
+  padding: 0.825em 0;
   text-align: left;
 }
 
 td {
   border-bottom: 1px solid #dddddd;
-  padding: 0.75em 0;
+  padding: 0.825em 0;
 }
 
 tr, td, th {
@@ -276,12 +276,12 @@ ul, ol {
   list-style-type: none;
 }
 dl {
-  line-height: 1.5em;
-  margin-bottom: 0.75em;
+  line-height: 1.65em;
+  margin-bottom: 0.825em;
 }
 dl dt {
   font-weight: bold;
-  margin-top: 0.75em;
+  margin-top: 0.825em;
 }
 dl dd {
   margin: 0;
@@ -292,12 +292,12 @@ body {
 }
 @media screen and (min-width: 769px) and (max-width: 992px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.32em;
   }
 }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 1.5em;
+    font-size: 1.32em;
   }
 }
 
@@ -305,7 +305,7 @@ body {
   height: 25px;
 }
 
-.map {
+.angular-google-map-container {
   height: 300px;
   border: 5px solid #545454;
 }
@@ -610,7 +610,7 @@ body {
   margin-right: 0;
 }
 .card .program .program-content .program-title.small {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: bolder;
   color: #545454;
 }
@@ -637,6 +637,7 @@ body {
 @media screen and (max-width: 768px) {
   .card .program {
     padding: 0 0 0 0;
+    margin-bottom: 40px;
   }
   .card .program .program-content {
     float: left;
@@ -646,6 +647,9 @@ body {
   }
   .card .program .program-content:last-child {
     margin-right: 0;
+  }
+  .card .program .program-content .program-text, .card .program .program-content .program-header {
+    text-align: center;
   }
   .card .program .program-content .program-time, .card .program .program-content .program-address {
     float: left;
@@ -670,6 +674,7 @@ body {
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .card .program {
     padding: 0 0 0 0;
+    margin-bottom: 40px;
   }
   .card .program .program-content {
     float: left;
@@ -679,6 +684,9 @@ body {
   }
   .card .program .program-content:last-child {
     margin-right: 0;
+  }
+  .card .program .program-content .program-text, .card .program .program-content .program-header {
+    text-align: center;
   }
   .card .program .program-content .program-time, .card .program .program-content .program-address {
     float: left;
@@ -725,7 +733,7 @@ body {
   text-align: left;
 }
 .card .hebergements .hebergements-item .hebergements-address div:first-of-type {
-  font-size: 1.1em;
+  font-size: 1.21em;
   font-weight: bolder;
   color: #545454;
 }
@@ -753,8 +761,8 @@ body {
     display: block;
     margin-right: 4.82916%;
     width: 100%;
-    font-size: 0.7em;
-    line-height: 1.5em;
+    font-size: 0.77em;
+    line-height: 1.65em;
   }
   .card .hebergements .hebergements-item:last-child {
     margin-right: 0;
