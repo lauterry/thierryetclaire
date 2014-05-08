@@ -203,10 +203,7 @@ body {
 			}
 		}
 
-	}
-
-	@include media($mobile) {
-		.program {
+		@include media($mobile) {
 			@include pad(0 0 0 0);
 			margin-bottom: 40px;
 
@@ -224,12 +221,9 @@ body {
 			.program-map {
 				@include span-columns(6);
 			}
-
 		}
-	}
 
-	@include media($tablet) {
-		.program {
+		@include media($tablet) {
 			@include pad(0 0 0 0);
 			margin-bottom: 40px;
 			.program-content {
@@ -246,10 +240,9 @@ body {
 			.program-map {
 				@include span-columns(8);
 			}
-
 		}
-	}
 
+	}
 
 	.hebergements {
 		@include span-columns(12);
@@ -261,6 +254,7 @@ body {
 
 			.hebergements-address {
 				text-align: left;
+				margin-bottom: 10px;
 				div:first-of-type {
 					font-size : $base-font-size * 1.1;
 					font-weight: bolder;
@@ -287,7 +281,7 @@ body {
 				line-height: $base-font-size * 1.5;
 
 				.hebergements-address {
-					margin: 0 0 10px 160px;
+					margin-left: 160px;
 				}
 
 				button {

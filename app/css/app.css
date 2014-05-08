@@ -731,6 +731,7 @@ body {
 }
 .card .hebergements .hebergements-item .hebergements-address {
   text-align: left;
+  margin-bottom: 10px;
 }
 .card .hebergements .hebergements-item .hebergements-address div:first-of-type {
   font-size: 1.21em;
@@ -768,7 +769,7 @@ body {
     margin-right: 0;
   }
   .card .hebergements .hebergements-item .hebergements-address {
-    margin: 0 0 10px 160px;
+    margin-left: 160px;
   }
   .card .hebergements .hebergements-item button {
     margin: 0 0 60px 0px;

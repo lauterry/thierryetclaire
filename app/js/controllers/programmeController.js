@@ -3,7 +3,7 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 
     $scope.steps = [{
 		name: "Cérémonie civile",
-		text: "Bezannes est une commune française, située dans le département de la Marne et la région Champagne-Ardenne. Elle fait partie de la communauté d'agglomération Reims Métropole. Ses habitants sont appelés les Bezannais. Elle fait partie des villes fleuries de France avec 3 fleurs.",
+		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
 			name: "Mairie de Bezannes",
 			address1: "1 rue Source de Muire",
@@ -22,7 +22,7 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		}
 	}, {
 		name: "Cérémonie religieuse",
-		text: "L’église de Bezannes remonte dans ses parties principales au XIe siècle. Ce monument, qui a été décrit en détail par les auteurs du Répertoire archéologique de l’arrondissement de Reims, est d’une belle conservation et offre quelque intérêt. La tour romane est surmontée d’une flèche construite au XVIe siècle. L'église est classée parmi les monuments historiques depuis le 10 décembre 1912 .",
+		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
 			name: "Eglise Saint-Martin",
 			address1: "22 Rue de l'Ancien Château",
