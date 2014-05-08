@@ -301,6 +301,39 @@ body {
   }
 }
 
+.ico {
+  height: 25px;
+}
+
+.map {
+  height: 300px;
+  border: 5px solid #545454;
+}
+
+.picture {
+  border-radius: 150px;
+  border: 3px solid white;
+  height: 245px;
+  margin: 0 20px;
+}
+.picture.small {
+  height: 120px;
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .picture {
+    height: 270px;
+    margin: 0 10px;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 .header {
   max-width: 68em;
   margin-left: auto;
@@ -469,18 +502,6 @@ body {
 }
 .card .weds .wed:last-child {
   margin-right: 0;
-}
-.card .weds .wed .picture {
-  border-radius: 150px;
-  border: 3px solid white;
-  height: 245px;
-  margin: 0 20px;
-}
-@media screen and (min-width: 769px) and (max-width: 992px) {
-  .card .weds .wed .picture {
-    height: 270px;
-    margin: 0 10px;
-  }
 }
 .card .weds .wed.girl .picture {
   float: right;
@@ -679,14 +700,71 @@ body {
     margin-right: 0;
   }
 }
-
-.ico {
-  height: 25px;
+.card .hebergements {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
 }
-
-.map {
-  height: 300px;
-  border: 5px solid #545454;
+.card .hebergements:last-child {
+  margin-right: 0;
+}
+.card .hebergements .hebergements-intro {
+  margin-bottom: 40px;
+}
+.card .hebergements .hebergements-item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+.card .hebergements .hebergements-item:last-child {
+  margin-right: 0;
+}
+.card .hebergements .hebergements-item .hebergements-address {
+  text-align: left;
+}
+.card .hebergements .hebergements-item .hebergements-address div:first-of-type {
+  font-size: 1.1em;
+  font-weight: bolder;
+  color: #545454;
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .card .hebergements .hebergements-item {
+    float: left;
+    display: block;
+    margin-right: 3.57866%;
+    width: 74.10533%;
+    margin-left: 25.89467%;
+  }
+  .card .hebergements .hebergements-item:last-child {
+    margin-right: 0;
+  }
+  .card .hebergements .hebergements-item .hebergements-address {
+    margin: 0 0 0 160px;
+  }
+  .card .hebergements .hebergements-item button {
+    margin: 0 0 60px 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card .hebergements .hebergements-item {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    font-size: 0.7em;
+    line-height: 1.5em;
+  }
+  .card .hebergements .hebergements-item:last-child {
+    margin-right: 0;
+  }
+  .card .hebergements .hebergements-item .hebergements-address {
+    margin: 0 0 10px 160px;
+  }
+  .card .hebergements .hebergements-item button {
+    margin: 0 0 60px 0px;
+  }
 }
 
 .dot_line {
