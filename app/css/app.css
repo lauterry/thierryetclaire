@@ -545,6 +545,11 @@ body {
     float: none;
   }
 }
+@media screen and (max-width: 768px) {
+  .card .weds {
+    padding: 0 0 0 0;
+  }
+}
 .card .program {
   padding: 0 50px 0 50px;
   float: left;

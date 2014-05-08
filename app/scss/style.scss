@@ -137,6 +137,10 @@ body {
 			}
 
 		}
+
+		@include media($mobile) {
+			@include pad(0 0 0 0);
+		}
 	}
 
 
@@ -216,8 +220,8 @@ body {
 
 		}
 	}
-
 }
+
 
 .ico {
 	height: 25px;
