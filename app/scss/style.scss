@@ -49,6 +49,15 @@ body {
 	float: right;
 }
 
+
+.gallery {
+	@include outer-container;
+
+	.gallery-picture {
+		border: 10px solid white;
+	}
+}
+
 .header {
 	@include outer-container;
 	position: relative;

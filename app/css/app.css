@@ -334,6 +334,20 @@ body {
   float: right;
 }
 
+.gallery {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.gallery .gallery-picture {
+  border: 10px solid white;
+}
+
 .header {
   max-width: 68em;
   margin-left: auto;
