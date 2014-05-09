@@ -74,7 +74,7 @@
 
 <section class="card" ng-controller="programmeController">
     <header>
-        <h1 class="card-title"> ~ Programme ~ </h1>
+        <h1 class="card-title"> ~ Festivités ~ </h1>
     </header>
 
 	<section class="program" ng-repeat="step in steps">
@@ -153,10 +153,10 @@
 	<section class="rsvp">
 		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
 		<form ng-submit="sendResponse()">
-			<input type="text" placeholder="Nom et prénom" ng-model="contact.name"/>
-			<input type="email" placeholder="Email" ng-model="contact.mail"/>
+			<input type="text" placeholder="Nom et prénom *" ng-model="contact.name" required/>
+			<input type="email" placeholder="Email *" ng-model="contact.mail" required/>
 			<input type="text" placeholder="Numéro de téléphone" ng-model="contact.phone">
-			<input type="number" placeholder="Vous serez combien ?" ng-model="contact.count"/>
+			<textarea cols="30" rows="5" placeholder="Message"></textarea>
 			<input type="submit" value="Je confirme"/>
 		</form>
 	</section>
