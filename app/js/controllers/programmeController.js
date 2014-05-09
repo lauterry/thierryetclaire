@@ -58,24 +58,5 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 			date: "Samedi 13 Juin 2015",
 			time: "13H30"
 		}
-	}, {
-		name: "Diner de mariage",
-		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
-		location : {
-			name: "Vilmart & Cie",
-			address1: "5 rue des Gravières",
-			address2: "51500 Rilly la Montagne",
-			map : {
-				center : {
-					latitude: 0,
-					longitude: 0
-				},
-				zoom: 16
-			}
-		},
-		when : {
-			date: "Samedi 13 Juin 2015",
-			time: "20H00"
-		}
 	}];
 });
