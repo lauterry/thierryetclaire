@@ -292,6 +292,8 @@ body {
 
 	.hebergements {
 		@include span-columns(12);
+		margin-bottom: 20px;
+
 		.hebergements-intro {
 			margin-bottom: 40px;
 		}
