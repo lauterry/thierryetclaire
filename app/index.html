@@ -9,6 +9,7 @@
     <!-- build:css css/ThierryEtClaire.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="vendor/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="vendor/angular-carousel/dist/angular-carousel.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="css/app.css"/>
     <!-- endbuild -->
@@ -53,11 +54,12 @@
 </div>
 
 
-<section class="gallery">
-	<img class="gallery-picture" src="https://lh3.googleusercontent.com/-sZWIv-Y2bsg/UnAMsOtWoaI/AAAAAAAALeg/EmWELAAQDjI/w1922-h1282-no/_MG_4606.JPG" alt=""/>
-	<img class="gallery-picture" src="https://lh3.googleusercontent.com/-sZWIv-Y2bsg/UnAMsOtWoaI/AAAAAAAALeg/EmWELAAQDjI/w1922-h1282-no/_MG_4606.JPG" alt=""/>
-	<img class="gallery-picture" src="https://lh3.googleusercontent.com/-sZWIv-Y2bsg/UnAMsOtWoaI/AAAAAAAALeg/EmWELAAQDjI/w1922-h1282-no/_MG_4606.JPG" alt=""/>
-	<img class="gallery-picture" src="https://lh3.googleusercontent.com/-sZWIv-Y2bsg/UnAMsOtWoaI/AAAAAAAALeg/EmWELAAQDjI/w1922-h1282-no/_MG_4606.JPG" alt=""/>
+<section class="gallery" ng-controller="galleryController">
+	<ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-control>
+		<li ng-repeat="photo in photos">
+			<img class="gallery-item" ng-src="{{photo.url}}" alt=""/>
+		</li>
+	</ul>
 </section>
 
 
@@ -183,12 +185,14 @@
 <script src="vendor/angular-touch/angular-touch.js"></script>
 <script src="vendor/underscore/underscore.js"></script>
 <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="vendor/angular-carousel/dist/angular-carousel.js"></script>
 <!-- endbower -->
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers/mainController.js"></script>
 <script type="text/javascript" src="js/controllers/programmeController.js"></script>
 <script type="text/javascript" src="js/controllers/hebergementsController.js"></script>
 <script type="text/javascript" src="js/controllers/rsvpController.js"></script>
+<script type="text/javascript" src="js/controllers/galleryController.js"></script>
 <!-- endbuild -->
 
 </body>

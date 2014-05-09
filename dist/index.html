@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/7de0c5ef.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/3e304bda.ThierryEtClaire.css"/>
 
     <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -47,6 +47,25 @@
     </div>
 </div>
 
+
+<section class="gallery" ng-controller="galleryController">
+	<ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-control>
+		<li ng-repeat="photo in photos">
+			<img class="gallery-item" ng-src="{{photo.url}}" alt=""/>
+		</li>
+	</ul>
+</section>
+
+
+
+<div class="dot_line">
+	<div class="lines_dot">
+		<div class="icon">♡</div>
+	</div>
+</div>
+
+
+
 <section class="card" ng-controller="programmeController">
     <header>
         <h1 class="card-title"> ~ Programme ~ </h1>
@@ -79,11 +98,15 @@
 
 </section>
 
+
+
 <div class="dot_line">
 	<div class="lines_dot">
 		<div class="icon">♡</div>
 	</div>
 </div>
+
+
 
 
 <section class="card" ng-controller="hebergementsController">
@@ -104,11 +127,18 @@
 	</section>
 </section>
 
+
+
+
 <div class="dot_line">
 	<div class="lines_dot">
 		<div class="icon">♡</div>
 	</div>
 </div>
+
+
+
+
 
 <section class="card" ng-controller="rsvpController">
 	<header>
@@ -126,6 +156,9 @@
 	</section>
 </section>
 
+
+
+
 <div class="dot_line">
 	<div class="lines_dot">
 		<div class="icon">♡</div>
@@ -140,7 +173,7 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 
-<script src="js/2041dbd6.ThierryEtClaire.js"></script>
+<script src="js/84f7bd6e.ThierryEtClaire.js"></script>
 
 </body>
 </html>

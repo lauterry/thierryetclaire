@@ -49,14 +49,51 @@ body {
 	float: right;
 }
 
-
-.gallery {
+.gallery{
 	@include outer-container;
+	.gallery-item {
+		@include span-columns(8);
+		@include shift(2);
+		border : 10px solid white;
+	}
+	.rn-carousel-indicator {
+		@include span-columns(6);
+		@include shift(3);
+		background-color: rgba(255, 255, 255, 0);
+		margin-top: 10px;
+	}
 
-	.gallery-picture {
-		border: 10px solid white;
+	.rn-carousel-control {
+		color: white;
+		font-size: 60px;
+		font-weight: bold;
+	}
+
+	@include media($tablet) {
+		.gallery-item, .rn-carousel-indicator {
+			@include span-columns(8);
+			@include shift(0);
+			.rn-carousel-control {
+				color: white;
+				font-size: 40px;
+				font-weight: bold;
+			}
+		}
+	}
+
+	@include media($mobile) {
+		.gallery-item, .rn-carousel-indicator {
+			@include span-columns(6);
+			@include shift(0);
+		}
+		.rn-carousel-control {
+			color: white;
+			font-size: 30px;
+			font-weight: bold;
+		}
 	}
 }
+
 
 .header {
 	@include outer-container;
