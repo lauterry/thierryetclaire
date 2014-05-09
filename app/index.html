@@ -115,7 +115,27 @@
 	</div>
 </div>
 
+<section class="card" ng-controller="rsvpController">
+	<header>
+		<h1 class="card-title">~ Vous venez ? ~</h1>
+	</header>
+	<section class="rsvp">
+		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
+		<form ng-submit="sendResponse()">
+			<input type="text" placeholder="Nom et prénom" ng-model="contact.name"/>
+			<input type="email" placeholder="Email" ng-model="contact.mail"/>
+			<input type="text" placeholder="Numéro de téléphone" ng-model="contact.phone">
+			<input type="number" placeholder="Vous serez combien ?" ng-model="contact.count"/>
+			<input type="submit" value="Je confirme"/>
+		</form>
+	</section>
+</section>
 
+<div class="dot_line">
+	<div class="lines_dot">
+		<div class="icon">♡</div>
+	</div>
+</div>
 
 <footer>
 
@@ -136,6 +156,7 @@
 <script type="text/javascript" src="js/controllers/mainController.js"></script>
 <script type="text/javascript" src="js/controllers/programmeController.js"></script>
 <script type="text/javascript" src="js/controllers/hebergementsController.js"></script>
+<script type="text/javascript" src="js/controllers/rsvpController.js"></script>
 <!-- endbuild -->
 
 </body>

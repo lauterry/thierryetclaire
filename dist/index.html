@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/e272b23f.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/7de0c5ef.ThierryEtClaire.css"/>
 
     <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
     <h1 class="header-title"> ❧ Claire & Thierry ☙</h1>
     <div class="ribbon">
         <div class="ribbon-stitches-top"></div>
-        <strong class="ribbon-content"><h1>~ le 13 Juin 2015 à Reims ~</h1></strong>
+        <strong class="ribbon-content"><h1>~ le 13 Juin 2015 à Bezannes ~</h1></strong>
         <div class="ribbon-stitches-bottom"></div>
     </div>
 </header>
@@ -32,11 +32,11 @@
     <section class="weds">
         <article class="wed girl">
             <img class="picture" src="img/claire-1.jpg" alt="Claire"/>
-            <p><span class="lettrine">Claire </span>est née à Reims le 20 mars 1989. Passionnée par les métiers de la Petite Enfance, elle obtient son diplôme d'Educatrice de Jeunes Enfants en 2013 avant d'intégrer une crèche à Vincennes où elle vit actuellement avec Thierry.</p>
+            <p><span class="lettrine">Claire </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam assumenda debitis dolore fugit iusto laudantium, molestias nihil suscipit totam?</p>
         </article>
         <article class="wed boy">
             <img class="picture" src="img/thierry-2.jpg" alt="Thierry"/>
-            <p><span class="lettrine">Thierry </span> est né en Nouvelle-Calédonie le 28 mars 1986 de parents d'origine Chinoise. Il quitte son île en 2006 pour intégrer une Grande Ecole d'Ingénieur à Paris. Aujourd'hui Thierry est passionné par les technologies du Web et travaille actuellement sur Paris en tant que développeur.</p>
+            <p><span class="lettrine">Thierry </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto, culpa distinctio minus quasi unde voluptatum! Commodi doloremque maxime nihil, nobis quidem rem repellendus ullam.</p>
         </article>
     </section>
 </section>
@@ -91,7 +91,7 @@
 		<h1 class="card-title">~ Hébergements ~</h1>
 	</header>
 	<section class="hebergements">
-		<p class="hebergements-intro">Nous voulons que nos invités soient installés confortablement. Nous avons donc sélectionné une liste d'hotel aux meilleurs rapports qualité/prix aux alentours.</p>
+		<p class="hebergements-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis deleniti dolorem dolorum, ducimus explicabo itaque magni maxime officiis quam.</p>
 		<article class="hebergements-item" ng-repeat="hebergement in hebergements">
 			<img class="picture small left" ng-src="{{ hebergement.img }}" alt="BB"/>
 			<div class="hebergements-address">
@@ -110,7 +110,27 @@
 	</div>
 </div>
 
+<section class="card" ng-controller="rsvpController">
+	<header>
+		<h1 class="card-title">~ Vous venez ? ~</h1>
+	</header>
+	<section class="rsvp">
+		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
+		<form ng-submit="sendResponse()">
+			<input type="text" placeholder="Nom et prénom" ng-model="contact.name"/>
+			<input type="email" placeholder="Email" ng-model="contact.mail"/>
+			<input type="text" placeholder="Numéro de téléphone" ng-model="contact.phone">
+			<input type="number" placeholder="Vous serez combien ?" ng-model="contact.count"/>
+			<input type="submit" value="Je confirme"/>
+		</form>
+	</section>
+</section>
 
+<div class="dot_line">
+	<div class="lines_dot">
+		<div class="icon">♡</div>
+	</div>
+</div>
 
 <footer>
 
@@ -120,7 +140,7 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 
-<script src="js/925fa649.ThierryEtClaire.js"></script>
+<script src="js/2041dbd6.ThierryEtClaire.js"></script>
 
 </body>
 </html>
