@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/3e304bda.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/3989369c.ThierryEtClaire.css"/>
 
     <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -68,7 +68,7 @@
 
 <section class="card" ng-controller="programmeController">
     <header>
-        <h1 class="card-title"> ~ Programme ~ </h1>
+        <h1 class="card-title"> ~ Festivités ~ </h1>
     </header>
 
 	<section class="program" ng-repeat="step in steps">
@@ -117,7 +117,7 @@
 		<p class="hebergements-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis deleniti dolorem dolorum, ducimus explicabo itaque magni maxime officiis quam.</p>
 		<article class="hebergements-item" ng-repeat="hebergement in hebergements">
 			<img class="picture small left" ng-src="{{ hebergement.img }}" alt="BB"/>
-			<div class="hebergements-address">
+			<div class="hebergements-address" ng-click="openLocation(hebergement)">
 				<div>{{ hebergement.name}}</div>
 				<div>{{ hebergement.address1 }}</div>
 				<div>{{ hebergement.address2 }}</div>
@@ -147,10 +147,10 @@
 	<section class="rsvp">
 		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
 		<form ng-submit="sendResponse()">
-			<input type="text" placeholder="Nom et prénom" ng-model="contact.name"/>
-			<input type="email" placeholder="Email" ng-model="contact.mail"/>
+			<input type="text" placeholder="Nom et prénom *" ng-model="contact.name" required/>
+			<input type="email" placeholder="Email *" ng-model="contact.mail" required/>
 			<input type="text" placeholder="Numéro de téléphone" ng-model="contact.phone">
-			<input type="number" placeholder="Vous serez combien ?" ng-model="contact.count"/>
+			<textarea cols="30" rows="5" placeholder="Message"></textarea>
 			<input type="submit" value="Je confirme"/>
 		</form>
 	</section>
@@ -173,7 +173,7 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 
-<script src="js/84f7bd6e.ThierryEtClaire.js"></script>
+<script src="js/d1a0b0c2.ThierryEtClaire.js"></script>
 
 </body>
 </html>
