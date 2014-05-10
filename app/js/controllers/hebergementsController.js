@@ -1,4 +1,4 @@
-angular.module('ThierryEtClaire').controller('hebergementsController', function ($scope) {
+angular.module('ThierryEtClaire').controller('hebergementsController', function ($scope, $window) {
     "use strict";
 
     $scope.hebergements = [{
@@ -17,4 +17,11 @@ angular.module('ThierryEtClaire').controller('hebergementsController', function 
 		address2: "51430 Tinqueux",
 		img: "img/hotel-campanile.jpg"
 	}];
+
+	$scope.openLocation = function(hebergement) {
+		var adresse = hebergement.address1 + ' ' + hebergement.address2;
+		adresse.replace('', '+');
+		$window.location.href = "https://www.google.fr/maps/place/" + adresse;
+	};
+
 });

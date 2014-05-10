@@ -303,6 +303,10 @@ body {
 			.hebergements-address {
 				text-align: left;
 				margin-bottom: 10px;
+				&:hover {
+					cursor: pointer;
+					text-decoration: underline;
+				}
 				div:first-of-type {
 					font-size : $base-font-size * 1.1;
 					font-weight: bolder;

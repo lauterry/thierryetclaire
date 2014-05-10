@@ -123,7 +123,7 @@
 		<p class="hebergements-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis deleniti dolorem dolorum, ducimus explicabo itaque magni maxime officiis quam.</p>
 		<article class="hebergements-item" ng-repeat="hebergement in hebergements">
 			<img class="picture small left" ng-src="{{ hebergement.img }}" alt="BB"/>
-			<div class="hebergements-address">
+			<div class="hebergements-address" ng-click="openLocation(hebergement)">
 				<div>{{ hebergement.name}}</div>
 				<div>{{ hebergement.address1 }}</div>
 				<div>{{ hebergement.address2 }}</div>

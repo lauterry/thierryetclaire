@@ -807,6 +807,10 @@ body {
   text-align: left;
   margin-bottom: 10px;
 }
+.card .hebergements .hebergements-item .hebergements-address:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .card .hebergements .hebergements-item .hebergements-address div:first-of-type {
   font-size: 1.21em;
   font-weight: bolder;
