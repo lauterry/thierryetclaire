@@ -1,4 +1,4 @@
-angular.module('ThierryEtClaire').controller('programmeController', function ($scope, geolocation, $log) {
+angular.module('ThierryEtClaire').controller('programmeController', function ($scope, geolocation, $log, $window) {
     "use strict";
 
     $scope.steps = [{
@@ -65,4 +65,14 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 	}, function(error){
 		$log.log(error);
 	});
+
+
+	$scope.launchItinerary = function (sourceCoordinate, destinationAddress) {
+
+		var dest = destinationAddress.address1 + ' ' + destinationAddress.address2;
+
+		var source = sourceCoordinate.latitude + "," + sourceCoordinate.longitude;
+		$window.location.href = "http://maps.google.com/maps?saddr=" + source + '&daddr=' + dest;
+
+	};
 });
