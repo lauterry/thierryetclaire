@@ -4,7 +4,8 @@ angular.module('ThierryEtClaire').controller('galleryController', function ($sco
 	$scope.photos = [
 		{ url : "img/photo1.jpg" },
 		{ url : "img/photo2.jpg" },
-		{ url : "img/photo3.jpg" }
+		{ url : "img/photo3.jpg" },
+		{ url : "img/photo4.jpg" }
 	];
 
 });
