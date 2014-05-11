@@ -1,4 +1,4 @@
-angular.module('ThierryEtClaire').controller('programmeController', function ($scope) {
+angular.module('ThierryEtClaire').controller('programmeController', function ($scope, geolocation, $log) {
     "use strict";
 
     $scope.steps = [{
@@ -59,4 +59,10 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 			time: "13H30"
 		}
 	}];
+
+	geolocation.getPosition().then(function(position) {
+		$scope.position = position;
+	}, function(error){
+		$log.log(error);
+	});
 });
