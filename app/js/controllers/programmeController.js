@@ -6,8 +6,8 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
 			name: "Mairie de Bezannes",
-			address1: "1 rue Source de Muire",
-			address2: "51726 Bezannes",
+			address1: "Mairie, 1 Rue Source de Muire",
+			address2: "51430 Bezannes",
 			map : {
 				center : {
 					latitude: 49.2201195,
@@ -46,8 +46,8 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
 			name: "Salle Hélios à la Mairie de Bezannes",
-			address1: "1 rue Source de Muire",
-			address2: "51726 Bezannes",
+			address1: "Mairie, 1 Rue Source de Muire",
+			address2: "51430 Bezannes",
 			map : {
 				center : {
 					latitude: 49.2201195,
