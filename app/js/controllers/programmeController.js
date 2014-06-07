@@ -19,7 +19,8 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		when : {
 			date: "Samedi 13 Juin 2015",
 			time: "11H30"
-		}
+		},
+		image : 'img/mairie-bezannes.jpg'
 	}, {
 		name: "Cérémonie religieuse",
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
@@ -38,7 +39,8 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		when : {
 			date: "Samedi 13 Juin 2015",
 			time: "12H30"
-		}
+		},
+		image : 'img/eglise-bezannes.jpg'
 	}, {
 		name: "Vin d'Honneur",
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
@@ -57,7 +59,8 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		when : {
 			date: "Samedi 13 Juin 2015",
 			time: "13H30"
-		}
+		},
+		image : 'img/vilmart.jpg'
 	}];
 
 	geolocation.getPosition().then(function(position) {
