@@ -1,6 +1,7 @@
 angular.module('ThierryEtClaire', [
     'ngTouch',
-	'google-maps'
+	'google-maps',
+	'duParallax'
 ]);
 
 
