@@ -107,21 +107,49 @@
 	</header>
 	<section class="rsvp">
 		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
-		<form ng-submit="sendResponse()">
-			<input type="text" placeholder="Nom et prénom *" ng-model="contact.name" required/>
-			<input type="email" placeholder="Email *" ng-model="contact.mail" required/>
-			<input type="text" placeholder="Numéro de téléphone" ng-model="contact.phone">
-			<textarea cols="30" rows="5" placeholder="Message"></textarea>
-			<input type="submit" value="Je confirme"/>
+		<form novalidate ng-submit="sendResponse()" name="rsvpForm">
+
+			<div class="help-block error" ng-show="rsvpForm.name.$dirty && rsvpForm.name.$error.required">Merci de renseigner votre nom et prénom</div>
+			<input type="text" name="name" placeholder="Nom et prénom *" ng-model="contact.name" ng-model-options="{ updateOn: 'blur' }" required/>
+
+			<div class="help-block error" ng-show="rsvpForm.email.$dirty && rsvpForm.email.$error.required">Merci de renseigner votre email</div>
+			<div class="help-block error" ng-show="rsvpForm.email.$dirty && rsvpForm.email.$error.email">Votre email n'est pas correct.</div>
+			<input type="email" name="email" placeholder="Email *" ng-model="contact.mail" ng-model-options="{ updateOn: 'blur' }" required/>
+
+			<div class="help-block error" ng-show="rsvpForm.phone.$dirty && rsvpForm.phone.$error.required">Merci de renseigner votre numéro de téléphone</div>
+			<input type="tel" name="phone" placeholder="Numéro de téléphone *" ng-model="contact.phone" ng-model-options="{ updateOn: 'blur' }" required>
+
+			<div class="help-block error center"
+				 ng-show="rsvpForm.nombreAdultes.$dirty && rsvpForm.nombreAdultes.$error.required && rsvpForm.nombreEnfants.$dirty && rsvpForm.nombreEnfants.$error.required">Combien seriez-vous ?</div>
+
+			Nous serons <input type="number" name="nombreAdultes" class="small" ng-model="contact.nombreAdultes" ng-model-options="{ updateOn: 'blur' }" required/>
+
+			adulte<ng-pluralize count = "contact.nombreAdultes"
+						  when = " {
+						  	'0': '',
+   							'one': '',
+    						'other': 's'
+    						} ">
+					</ng-pluralize>*
+
+			et <input type="number" name="nombreEnfants"  class="small" ng-model="contact.nombreEnfants" ng-model-options="{ updateOn: 'blur' }" required/>
+
+			enfant<ng-pluralize count = "contact.nombreEnfants"
+								when = " {
+						  	'0': '',
+   							'one': '',
+    						'other': 's'
+    						} ">
+			</ng-pluralize>*
+
+			<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+
+			<input type="submit" value="Je confirme" ng-disabled="rsvpForm.$invalid"/>
 		</form>
 	</section>
 </section>
 
 <dotline></dotline>
-
-<footer>
-
-</footer>
 
 <script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">

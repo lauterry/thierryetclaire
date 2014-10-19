@@ -301,6 +301,12 @@ body {
   }
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .ico {
   height: 25px;
 }
@@ -844,6 +850,24 @@ body {
   .left-picture {
     display: none;
   }
+}
+
+.help-block {
+  text-align: left;
+  margin-left: 12px;
+}
+.help-block.center {
+  text-align: center;
+}
+.help-block.error {
+  color: red;
+}
+
+input.small {
+  display: inline-block;
+  width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */

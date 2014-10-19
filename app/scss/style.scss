@@ -7,14 +7,19 @@ body {
 	background: url('../img/bg_3.jpg');
 
 	@include media($tablet) {
-		font-size : $base-font-size * 1.2;
+		font-size: $base-font-size * 1.2;
 	}
 
 	@include media($mobile) {
-		font-size : $base-font-size * 1.2;
+		font-size: $base-font-size * 1.2;
 	}
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
 
 .ico {
 	height: 25px;
@@ -64,7 +69,7 @@ body {
 
 	.header-title {
 		font-size: 100px;
-		margin:	50px 50px 20px;
+		margin: 50px 50px 20px;
 
 		@include media($mobile) {
 			font-size: 50px;
@@ -95,12 +100,12 @@ body {
 
 		@include media($tablet) {
 			font-size: 70px;
-			margin:	10px 50px 20px;
+			margin: 10px 50px 20px;
 		}
 
 		@include media($mobile) {
 			font-size: 50px;
-			margin:	10px 0 20px;
+			margin: 10px 0 20px;
 		}
 
 	}
@@ -173,7 +178,6 @@ body {
 		}
 	}
 
-
 	.program {
 		@include pad(0 50px 0 50px);
 		@include span-columns(12);
@@ -193,7 +197,7 @@ body {
 				text-align: left;
 			}
 
-			.program-time, .program-address  {
+			.program-time, .program-address {
 				@include span-columns(3 of 6);
 			}
 
@@ -206,12 +210,12 @@ body {
 
 		.program-map {
 			@include span-columns(6);
-			@include media($mobile){
+			@include media($mobile) {
 				@include span-columns(6);
 			}
 
 			img {
-				border : 5px solid white;
+				border: 5px solid white;
 			}
 		}
 
@@ -226,7 +230,7 @@ body {
 				}
 				.program-time, .program-address {
 					@include span-columns(6);
-					margin-bottom : 20px;
+					margin-bottom: 20px;
 				}
 			}
 
@@ -245,7 +249,7 @@ body {
 				}
 				.program-time, .program-address {
 					@include span-columns(4);
-					margin-bottom : 20px;
+					margin-bottom: 20px;
 				}
 			}
 
@@ -274,7 +278,7 @@ body {
 					text-decoration: underline;
 				}
 				div:first-of-type {
-					font-size : $base-font-size * 1.1;
+					font-size: $base-font-size * 1.1;
 					font-weight: bolder;
 					color: #545454;
 				}
@@ -317,7 +321,6 @@ body {
 	width: 70%;
 	margin: 50px auto;
 
-
 	.lines_dot {
 		background: url(http://www.cmsandblogtemplates.com/tf/Wedding_Slide/v_2_0/images/dot_line.png) repeat-x left center;
 		padding: 10px 0px;
@@ -341,8 +344,6 @@ body {
 
 }
 
-
-
 // TOP PICTURE
 .left-picture {
 	position: absolute;
@@ -362,4 +363,25 @@ body {
 	@include media($mobile) {
 		display: none;
 	}
+}
+
+.help-block {
+	text-align: left;
+	margin-left: 12px;
+
+	&.center {
+		text-align: center;
+	}
+
+	&.error {
+		color: red;
+	}
+}
+
+
+input.small {
+	display: inline-block;
+	width: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
