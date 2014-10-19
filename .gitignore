@@ -6,3 +6,5 @@ app/vendor
 *.iml
 .DS_Store
 .sass-cache/
+app/css/*.map
+app/css/*.css

@@ -6,8 +6,7 @@
     "angular-touch": "",
     "neat": "~1.6.0",
     "normalize-css": "~3.0.1",
-    "angular-google-maps": "~1.0.18",
-    "ng-parallax": "~0.1.8"
+    "angular-google-maps": "~1.0.18"
   },
   "devDependencies": {}
 }
