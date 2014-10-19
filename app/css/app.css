@@ -13,9 +13,9 @@ input[type="submit"] {
   display: inline-block;
   font-size: inherit;
   font-weight: bold;
-  background-color: #477dca;
-  background-image: -webkit-linear-gradient(#477dca, #2760b2);
-  background-image: linear-gradient(#477dca, #2760b2);
+  background-color: #477DCA;
+  background-image: -webkit-linear-gradient(#477DCA, #2760b2);
+  background-image: linear-gradient(#477DCA, #2760b2);
   padding: 7px 18px;
   text-decoration: none;
   text-shadow: 0 1px 0 #1b4f9a;
@@ -46,7 +46,7 @@ input[type="submit"]:disabled {
 }
 
 body {
-  color: #333333;
+  color: #333;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.1em;
   -webkit-font-smoothing: antialiased;
@@ -89,7 +89,7 @@ p {
 }
 
 a {
-  color: #477dca;
+  color: #477DCA;
   text-decoration: none;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
@@ -104,7 +104,7 @@ a:active, a:focus {
 }
 
 hr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -117,7 +117,7 @@ img {
 }
 
 abbr, acronym {
-  border-bottom: 1px dotted #dddddd;
+  border-bottom: 1px dotted #DDD;
   cursor: help;
 }
 
@@ -135,7 +135,7 @@ del {
 }
 
 blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #DDD;
   color: #595959;
   margin: 1.65em 0;
   padding-left: 0.825em;
@@ -151,7 +151,7 @@ cite:before {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   margin: 0 0 0.825em 0;
   padding: 1.65em;
 }
@@ -186,7 +186,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 0.1875em;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.1em;
@@ -202,7 +202,7 @@ select[multiple=multiple]:hover {
 textarea:focus,
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
 select[multiple=multiple]:focus {
-  border-color: #477dca;
+  border-color: #477DCA;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
   outline: none;
 }
@@ -262,7 +262,7 @@ th {
 }
 
 td {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0.825em 0;
 }
 
@@ -364,12 +364,12 @@ body {
   text-align: center;
   line-height: initial;
   background: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e8e8e8));
-  background: -webkit-linear-gradient(top, white, #e8e8e8);
-  background: -moz-linear-gradient(top, white, #e8e8e8);
-  background: -ms-linear-gradient(top, white, #e8e8e8);
-  background: -o-linear-gradient(top, white, #e8e8e8);
-  background-image: -ms-linear-gradient(top, white 0%, #e8e8e8 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e8e8e8));
+  background: -webkit-linear-gradient(top, #ffffff, #e8e8e8);
+  background: -moz-linear-gradient(top, #ffffff, #e8e8e8);
+  background: -ms-linear-gradient(top, #ffffff, #e8e8e8);
+  background: -o-linear-gradient(top, #ffffff, #e8e8e8);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #e8e8e8 100%);
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
@@ -845,3 +845,5 @@ body {
     display: none;
   }
 }
+
+/*# sourceMappingURL=app.css.map */
