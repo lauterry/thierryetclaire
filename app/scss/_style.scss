@@ -1,12 +1,45 @@
 $red : #962C42;
+$white : #fff;
+
+body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+	line-height: $base-line-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font-family;
+	line-height: 1.25em;
+	margin: 0;
+	text-rendering: optimizeLegibility; // Fix the character spacing for headings
+}
+
+h1 {
+	font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
+}
+
+h2 {
+	font-size: $base-font-size * 2; // 16 * 2 = 32px
+}
+
+h3 {
+	font-size: $base-font-size * 1.75; // 16 * 1.75 = 28px
+}
 
 a {
-	color : inherit;
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 .full-image-background {
 	height: 800px;
-	background: url(../img/photo2.jpg) no-repeat center center fixed;
+	background: url(../img/photo-3-sepia.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -18,6 +51,8 @@ a {
 	min-height: 90px;
 	padding: 0 200px;
 	margin-bottom: 20px;
+	box-sizing: border-box;
+	display: block;
 }
 
 .nav {
@@ -51,5 +86,58 @@ a {
 			background-color: darken($red, 8%);
 		}
 
+	}
+}
+
+.block-container {
+	margin: 0 40px;
+}
+
+.block {
+	display: flex;
+	justify-content: center;
+
+	&-header {
+		text-align: center;
+	}
+
+	&-body {
+		display : flex;
+	}
+
+}
+
+@mixin separator($color, $width, $top) {
+	color : $color;
+	&-line {
+		border: 0;
+		border-top: 1px solid $color;
+		display: inline-block;
+		margin: $top 10px;
+		width: $width;
+	}
+}
+
+.block {
+	.separator {
+		@include separator($red, 40px, 5px);
+	}
+}
+
+.hero {
+	display : flex;
+	align-items: center;
+	justify-content: center;
+	color : $white;
+	padding-top: 280px;
+
+	&-header {
+		text-align: center;
+		font-size: 3em;
+
+		.separator {
+			@include separator($white, 200px, 20px);
+			font-size: 1em;
+		}
 	}
 }

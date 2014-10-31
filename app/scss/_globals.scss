@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+$montez : 'Montez', cursive;
+$josefinsans: 'Josefin Sans', sans-serif;
+
+$base-font-family: $josefinsans;
+$header-font-family: $montez;
+
+$base-font-size: 1.1em;
+$base-line-height: $base-font-size * 1.5;
+
 $mobile: max-width 768px 6;
 $tablet: min-width 769px max-width 992px 8;
 $large-screen: min-width 992px;
