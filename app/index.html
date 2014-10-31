@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="ThierryEtClaire">
 <head>
-    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="app/scss/_style.scss"/>
+	<link rel="stylesheet" type="text/css" href="app/scss/_style.scss"/>
+	<link rel="stylesheet" type="text/css" href="app/scss/_style.scss"/>
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Thierry & Claire</title>
@@ -9,7 +12,6 @@
     <!-- build:css css/ThierryEtClaire.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="vendor/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="vendor/angular-carousel/dist/angular-carousel.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="css/app.css"/>
     <!-- endbuild -->
@@ -18,138 +20,31 @@
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
 </head>
-<body ng-controller="mainController">
+<body>
 
-<img class="left-picture" src="img/bonheur-kanji.png" alt="Bonheur"/>
+<div class="full-image-background"></div>
 
-<header class="header">
-    <h1 class="header-title">Claire & Thierry</h1>
-    <div class="ribbon">
-        <div class="ribbon-stitches-top"></div>
-        <strong class="ribbon-content"><h1>~ Samedi 13 Juin 2015 ~</h1></strong>
-        <div class="ribbon-stitches-bottom"></div>
-    </div>
+<header class="navbar">
+	<ul class="nav">
+		<li class="nav-item">
+			<a class="nav-item-link" href="">Nous</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-item-link" href="">Programme</a>
+		</li>
+		<li class="nav-item">
+			<img class="nav-item-img" src="img/double-bonheur-white.png" alt=""/>
+		</li>
+		<li class="nav-item">
+			<a class="nav-item-link" href="">Sponsor</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-item-link" href="">RSVP</a>
+		</li>
+	</ul>
 </header>
 
-<section class="card">
-    <header>
-        <h1 class="card-title"> ~ Les Mariés ~ </h1>
-    </header>
-    <section class="weds">
-        <article class="wed girl">
-            <img class="picture" src="img/claire-1.jpg" alt="Claire"/>
-            <p><span class="lettrine">Claire </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam assumenda debitis dolore fugit iusto laudantium, molestias nihil suscipit totam?</p>
-        </article>
-        <article class="wed boy">
-            <img class="picture" src="img/thierry-2.jpg" alt="Thierry"/>
-            <p><span class="lettrine">Thierry </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto, culpa distinctio minus quasi unde voluptatum! Commodi doloremque maxime nihil, nobis quidem rem repellendus ullam.</p>
-        </article>
-    </section>
-</section>
 
-<dotline></dotline>
-
-<section class="card" ng-controller="programmeController">
-    <header>
-        <h1 class="card-title"> ~ Festivités ~ </h1>
-    </header>
-	<section class="program" ng-repeat="step in steps">
-		<section class="program-content">
-			<h2 class="program-header">{{ step.name }}</h2>
-			<p class="program-text">{{ step.text }}</p>
-			<div class="program-address">
-				<img class="ico" src="img/pin.png" alt="pin"/>
-				<span class="program-title small">{{ step.location.name }}</span>
-				<div>
-					<div>{{ step.location.address1 }}</div>
-					<div>{{ step.location.address2 }}</div>
-				</div>
-				<button ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-			</div>
-			<div class="program-time">
-				<img class="ico" src="img/clock.png" alt="clock"/>
-				<span class="program-title small">{{ step.when.date }}</span>
-				<div>{{ step.when.time }}</div>
-			</div>
-		</section>
-		<section class="program-map">
-			<img ng-src="{{step.image}}" alt=""/>
-		</section>
-	</section>
-
-</section>
-
-<dotline></dotline>
-
-<section class="card" ng-controller="hebergementsController">
-	<header>
-		<h1 class="card-title">~ Hébergements ~</h1>
-	</header>
-	<section class="hebergements">
-		<p class="hebergements-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis deleniti dolorem dolorum, ducimus explicabo itaque magni maxime officiis quam.</p>
-		<article class="hebergements-item" ng-repeat="hebergement in hebergements">
-			<img class="picture small left" ng-src="{{ hebergement.img }}" alt="BB"/>
-			<div class="hebergements-address" ng-click="openLocation(hebergement)">
-				<div>{{ hebergement.name}}</div>
-				<div>{{ hebergement.address1 }}</div>
-				<div>{{ hebergement.address2 }}</div>
-			</div>
-			<button class="left">Réserver</button>
-		</article>
-	</section>
-</section>
-
-<dotline></dotline>
-
-<section class="card" ng-controller="rsvpController">
-	<header>
-		<h1 class="card-title">~ Vous venez ? ~</h1>
-	</header>
-	<section class="rsvp">
-		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
-		<form novalidate ng-submit="sendResponse()" name="rsvpForm">
-
-			<div class="help-block error" ng-show="rsvpForm.name.$dirty && rsvpForm.name.$error.required">Merci de renseigner votre nom et prénom</div>
-			<input type="text" name="name" placeholder="Nom et prénom *" ng-model="contact.name" ng-model-options="{ updateOn: 'blur' }" required/>
-
-			<div class="help-block error" ng-show="rsvpForm.email.$dirty && rsvpForm.email.$error.required">Merci de renseigner votre email</div>
-			<div class="help-block error" ng-show="rsvpForm.email.$dirty && rsvpForm.email.$error.email">Votre email n'est pas correct.</div>
-			<input type="email" name="email" placeholder="Email *" ng-model="contact.mail" ng-model-options="{ updateOn: 'blur' }" required/>
-
-			<div class="help-block error" ng-show="rsvpForm.phone.$dirty && rsvpForm.phone.$error.required">Merci de renseigner votre numéro de téléphone</div>
-			<input type="tel" name="phone" placeholder="Numéro de téléphone *" ng-model="contact.phone" ng-model-options="{ updateOn: 'blur' }" required>
-
-			<div class="help-block error center"
-				 ng-show="rsvpForm.nombreAdultes.$dirty && rsvpForm.nombreAdultes.$error.required && rsvpForm.nombreEnfants.$dirty && rsvpForm.nombreEnfants.$error.required">Combien seriez-vous ?</div>
-
-			Nous serons <input type="number" name="nombreAdultes" class="small" ng-model="contact.nombreAdultes" ng-model-options="{ updateOn: 'blur' }" required/>
-
-			adulte<ng-pluralize count = "contact.nombreAdultes"
-						  when = " {
-						  	'0': '',
-   							'one': '',
-    						'other': 's'
-    						} ">
-					</ng-pluralize>*
-
-			et <input type="number" name="nombreEnfants"  class="small" ng-model="contact.nombreEnfants" ng-model-options="{ updateOn: 'blur' }" required/>
-
-			enfant<ng-pluralize count = "contact.nombreEnfants"
-								when = " {
-						  	'0': '',
-   							'one': '',
-    						'other': 's'
-    						} ">
-			</ng-pluralize>*
-
-			<textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
-
-			<input type="submit" value="Je confirme" ng-disabled="rsvpForm.$invalid"/>
-		</form>
-	</section>
-</section>
-
-<dotline></dotline>
 
 <script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
@@ -163,12 +58,7 @@
 <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <script type="text/javascript" src="js/app.js"></script>
-<script src="js/directives/dotline.js"></script>
 <script type="text/javascript" src="js/services/geolocationService.js"></script>
-<script type="text/javascript" src="js/controllers/mainController.js"></script>
-<script type="text/javascript" src="js/controllers/programmeController.js"></script>
-<script type="text/javascript" src="js/controllers/hebergementsController.js"></script>
-<script type="text/javascript" src="js/controllers/rsvpController.js"></script>
 <!-- endbuild -->
 
 </body>
