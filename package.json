@@ -4,8 +4,7 @@
   "description": "Site de mariage de Claire et Thierry",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "postinstall": "./node-modules/grunt-cli/bin/grunt package"
+    "start": "node index.js"
   },
   "engines": {
     "node": "0.10.x"
@@ -15,10 +14,7 @@
     "url": "https://github.com/lauterry/thierryetclaire"
   },
   "dependencies": {
-    "express": "~4.9.x",
-    "bower": "^1.3.12",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13"
+    "express": "~4.9.x"
   },
   "devDependencies": {
     "grunt-usemin": "~2.0.0",
