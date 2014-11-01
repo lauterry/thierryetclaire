@@ -1,7 +1,7 @@
 {
 	"name": "thierry-et-claire",
 	"version": "",
-	description : "Site de mariage de Claire et Thierry",
+	"description" : "Site de mariage de Claire et Thierry",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js"
