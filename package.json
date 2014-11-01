@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "npm install; bower install; grunt package"
+    "postinstall": "./node-modules/grunt-cli/bin/grunt package"
   },
   "engines": {
     "node": "0.10.x"
