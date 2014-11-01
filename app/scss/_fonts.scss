@@ -23,6 +23,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-clock:before {
+	content: "\e601";
+}
+.icon-pin:before {
+	content: "\e600";
+}
 .icon-heart:before {
 	content: "\f004";
 }

@@ -24,6 +24,7 @@
 		<header class="hero-header">
 			<h1>Claire & Thierry</h1>
 			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
+			<p class="date">13 Juin 2010</p>
 		</header>
 	</section>
 </div>
@@ -48,23 +49,111 @@
 	</ul>
 </header>
 
-<section class="block-container">
+<!--section.block-container>section.block>header.block-header>h1{Festivités}+p.separator>span.separator-line+i.icon-heart+span.separator-line-->
 
-	<section class="block">
-		<header class="block-header">
-			<h1>Nous</h1>
-			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
-		</header>
-		<section class="block-body">
+<section class="block even">
+	<header class="block-header">
+		<h1>Nous</h1>
+		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
+	</header>
 
-			<section></section>
-			<section></section>
-
+	<section class="block-body">
+		<section class="columns">
+			<section class="columns-main">
+				<img class="avatar" src="img/claire-1.jpg" alt=""/>
+				<h1>Claire Poisblaud</h1>
+				<p class="columns-text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo impedit maxime nulla, officiis quibusdam quod reprehenderit tenetur! Ab aliquid assumenda cumque debitis dolores eaque eveniet natus praesentium sunt tenetur.</span></p>
+			</section>
+			<section class="columns-secondary">
+				<img class="avatar" src="img/thierry-2.jpg" alt=""/>
+				<h1>Thierry Lau</h1>
+				<p class="columns-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem dolorem dolorum exercitationem facilis fugiat fugit, inventore magnam magni modi nobis nostrum numquam omnis quae quibusdam quos sint temporibus vitae?</p>
+			</section>
 		</section>
 	</section>
-
 </section>
 
+<section class="block odd">
+	<header class="block-header">
+		<h1>Festivités</h1>
+
+		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
+			class="separator-line"></span></p>
+	</header>
+
+	<section class="block-body">
+		<section class="columns">
+			<section class="column-main">
+				<div class="card">
+					<img class="card-img" src="img/mairie-bezannes.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Cérémonie civile</h1>
+						<p class="time">11h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="column-secondary">
+				<div class="card">
+					<img class="card-img" src="img/eglise-bezannes.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Cérémonie réligieuse</h1>
+						<p class="time">15h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="column-third">
+				<div class="card">
+					<img class="card-img" src="img/vilmart.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Vin d'honneur</h1>
+						<p class="time">16h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="column-third">
+				<div class="card">
+					<img class="card-img" src="img/vilmart.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Diner de mariage</h1>
+						<p class="time">20h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+</section>
 
 <script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
