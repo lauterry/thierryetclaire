@@ -8,3 +8,4 @@ app/vendor
 .sass-cache/
 app/css/*.map
 app/css/*.css
+dist/

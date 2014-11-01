@@ -49,7 +49,8 @@ module.exports = function (grunt) {
 						dest: '<%= distDir %>/',
 						src: [
 							'index.html',
-							'img/**'
+							'img/**',
+							'fonts/**'
 						]
 					}
 				]
