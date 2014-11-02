@@ -39,6 +39,11 @@
 			@include separator($white, 40px, 5px);
 			margin-bottom: 20px;
 		}
+
+		&-button {
+			@include button($blue);
+		}
+
 	}
 
 }

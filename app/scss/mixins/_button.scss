@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@mixin button($color) {
+	color: $white;
+	padding: 7px 18px;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 3px;
+	border: 1px solid $color;
+	background-color: $color;
+
+	&:hover {
+		background-color: darken($color, 5%);
+		border: 1px solid darken($color, 5%);
+	}
+}

@@ -20,7 +20,8 @@
 	}
 
 	&-button {
-
+		@include button($red);
+		margin-top: 15px;
 	}
 }
 
