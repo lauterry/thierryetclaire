@@ -18,7 +18,8 @@ ThierryEtClaire
 * `grunt` : launch `grunt package`, run unit tests and e2e test and generate complexity report. Use this task for continuous integration.
 
 ## Deploy to heroku
-* Merge into heroku master
+* `grunt package` to update build files
+* commit your code
 * `git push heroku master`
 
 ## Available Grunt tasks
