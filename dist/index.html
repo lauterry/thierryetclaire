@@ -1,179 +1,160 @@
 <!DOCTYPE html>
 <html ng-app="ThierryEtClaire">
 <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/3989369c.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/1d589eea.ThierryEtClaire.css"/>
 
     <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 
 </head>
-<body ng-controller="mainController">
+<body>
 
-<img class="left-picture" src="img/bonheur-kanji.png" alt="Bonheur"/>
-
-<header class="header">
-    <h1 class="header-title"> ❧ Claire & Thierry ☙</h1>
-    <div class="ribbon">
-        <div class="ribbon-stitches-top"></div>
-        <strong class="ribbon-content"><h1>~ le 13 Juin 2015 à Bezannes ~</h1></strong>
-        <div class="ribbon-stitches-bottom"></div>
-    </div>
-</header>
-
-<section class="card">
-    <header>
-        <h1 class="card-title"> ~ Les Mariés ~ </h1>
-    </header>
-    <section class="weds">
-        <article class="wed girl">
-            <img class="picture" src="img/claire-1.jpg" alt="Claire"/>
-            <p><span class="lettrine">Claire </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam assumenda debitis dolore fugit iusto laudantium, molestias nihil suscipit totam?</p>
-        </article>
-        <article class="wed boy">
-            <img class="picture" src="img/thierry-2.jpg" alt="Thierry"/>
-            <p><span class="lettrine">Thierry </span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto, culpa distinctio minus quasi unde voluptatum! Commodi doloremque maxime nihil, nobis quidem rem repellendus ullam.</p>
-        </article>
-    </section>
-</section>
-
-<div class="dot_line">
-    <div class="lines_dot">
-        <div class="icon">♡</div>
-    </div>
+<div class="full-image-background">
+	<section class="hero">
+		<header class="hero-header">
+			<h1>Claire & Thierry</h1>
+			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
+			<p class="date">13 Juin 2010</p>
+		</header>
+	</section>
 </div>
 
-
-<section class="gallery" ng-controller="galleryController">
-	<ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-control>
-		<li ng-repeat="photo in photos">
-			<img class="gallery-item" ng-src="{{photo.url}}" alt=""/>
+<header class="navbar">
+	<ul class="nav">
+		<li class="nav-item">
+			<a class="nav-item-link" href="">Nous</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-item-link" href="">Programme</a>
+		</li>
+		<li class="nav-item">
+			<img class="nav-item-img" src="img/double-bonheur-white.png" alt=""/>
+		</li>
+		<li class="nav-item">
+			<a class="nav-item-link" href="">Sponsor</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-item-link" href="">RSVP</a>
 		</li>
 	</ul>
+</header>
+
+<!--section.block-container>section.block>header.block-header>h1{Festivités}+p.separator>span.separator-line+i.icon-heart+span.separator-line-->
+
+<section class="block even">
+	<header class="block-header">
+		<h1>Nous</h1>
+		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
+	</header>
+
+	<section class="block-body">
+		<section class="columns">
+			<section class="columns-main">
+				<img class="avatar" src="img/claire-1.jpg" alt=""/>
+				<h1>Claire Poisblaud</h1>
+				<p class="columns-text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo impedit maxime nulla, officiis quibusdam quod reprehenderit tenetur! Ab aliquid assumenda cumque debitis dolores eaque eveniet natus praesentium sunt tenetur.</span></p>
+			</section>
+			<section class="columns-secondary">
+				<img class="avatar" src="img/thierry-2.jpg" alt=""/>
+				<h1>Thierry Lau</h1>
+				<p class="columns-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem dolorem dolorum exercitationem facilis fugiat fugit, inventore magnam magni modi nobis nostrum numquam omnis quae quibusdam quos sint temporibus vitae?</p>
+			</section>
+		</section>
+	</section>
 </section>
 
+<section class="block odd">
+	<header class="block-header">
+		<h1>Festivités</h1>
 
+		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
+			class="separator-line"></span></p>
+	</header>
 
-<div class="dot_line">
-	<div class="lines_dot">
-		<div class="icon">♡</div>
-	</div>
-</div>
-
-
-
-<section class="card" ng-controller="programmeController">
-    <header>
-        <h1 class="card-title"> ~ Festivités ~ </h1>
-    </header>
-	<section class="program" ng-repeat="step in steps">
-		<section class="program-content">
-			<h2 class="program-header">{{ step.name }}</h2>
-			<p class="program-text">{{ step.text }}</p>
-			<div class="program-address">
-				<img class="ico" src="img/pin.png" alt="pin"/>
-				<span class="program-title small">{{ step.location.name }}</span>
-				<div>
-					<div>{{ step.location.address1 }}</div>
-					<div>{{ step.location.address2 }}</div>
+	<section class="block-body">
+		<section class="columns">
+			<section class="column-main">
+				<div class="card">
+					<img class="card-img" src="img/mairie-bezannes.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Cérémonie civile</h1>
+						<p class="time">11h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<button ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-			</div>
-			<div class="program-time">
-				<img class="ico" src="img/clock.png" alt="clock"/>
-				<span class="program-title small">{{ step.when.date }}</span>
-				<div>{{ step.when.time }}</div>
-			</div>
+			</section>
+			<section class="column-secondary">
+				<div class="card">
+					<img class="card-img" src="img/eglise-bezannes.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Cérémonie réligieuse</h1>
+						<p class="time">15h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="column-third">
+				<div class="card">
+					<img class="card-img" src="img/vilmart.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Vin d'honneur</h1>
+						<p class="time">16h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="column-third">
+				<div class="card">
+					<img class="card-img" src="img/vilmart.jpg" alt=""/>
+					<div class="card-body">
+						<h1 class="card-title">Diner de mariage</h1>
+						<p class="time">20h00</p>
+						<div class="card-text">
+							<div class="address">
+								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+								<p class="address-text">1 rue Source de Muire</p>
+								<p class="address-text">51726 Bezannes</p>
+								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</section>
-		<section class="program-map">
-			<google-map center="step.location.map.center" zoom="step.location.map.zoom">
-				<marker coords="step.location.map.center"></marker>
-			</google-map>
-		</section>
-	</section>
-
-</section>
-
-
-
-<div class="dot_line">
-	<div class="lines_dot">
-		<div class="icon">♡</div>
-	</div>
-</div>
-
-
-
-
-<section class="card" ng-controller="hebergementsController">
-	<header>
-		<h1 class="card-title">~ Hébergements ~</h1>
-	</header>
-	<section class="hebergements">
-		<p class="hebergements-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis debitis deleniti dolorem dolorum, ducimus explicabo itaque magni maxime officiis quam.</p>
-		<article class="hebergements-item" ng-repeat="hebergement in hebergements">
-			<img class="picture small left" ng-src="{{ hebergement.img }}" alt="BB"/>
-			<div class="hebergements-address" ng-click="openLocation(hebergement)">
-				<div>{{ hebergement.name}}</div>
-				<div>{{ hebergement.address1 }}</div>
-				<div>{{ hebergement.address2 }}</div>
-			</div>
-			<button class="left">Réserver</button>
-		</article>
 	</section>
 </section>
-
-
-
-
-<div class="dot_line">
-	<div class="lines_dot">
-		<div class="icon">♡</div>
-	</div>
-</div>
-
-
-
-
-
-<section class="card" ng-controller="rsvpController">
-	<header>
-		<h1 class="card-title">~ Vous venez ? ~</h1>
-	</header>
-	<section class="rsvp">
-		<p>Vous avez reçu notre faire-part ? Vous pouvez nous envoyer votre réponse en remplissant ce formulaire</p>
-		<form ng-submit="sendResponse()">
-			<input type="text" placeholder="Nom et prénom *" ng-model="contact.name" required/>
-			<input type="email" placeholder="Email *" ng-model="contact.mail" required/>
-			<input type="text" placeholder="Numéro de téléphone" ng-model="contact.phone">
-			<textarea cols="30" rows="5" placeholder="Message"></textarea>
-			<input type="submit" value="Je confirme"/>
-		</form>
-	</section>
-</section>
-
-
-
-
-<div class="dot_line">
-	<div class="lines_dot">
-		<div class="icon">♡</div>
-	</div>
-</div>
-
-<footer>
-
-</footer>
 
 <script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 
-<script src="js/832d0078.ThierryEtClaire.js"></script>
+<script src="js/1a0a42d0.ThierryEtClaire.js"></script>
 
 </body>
 </html>
