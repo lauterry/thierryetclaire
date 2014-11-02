@@ -17,6 +17,10 @@ ThierryEtClaire
 * Your package will be generated in a `dist` folder and your javascripts and stylesheets will be concatenated, minified and versionned.
 * `grunt` : launch `grunt package`, run unit tests and e2e test and generate complexity report. Use this task for continuous integration.
 
+## Deploy to heroku
+* Merge into heroku master
+* `git push heroku master`
+
 ## Available Grunt tasks
 * `grunt test:unit` : run karma unit tests and show test coverage in console.
 * `grunt test:e2e` : run karma e2e tests
