@@ -1,3 +1,15 @@
 @import "globals";
+@import "reset";
 @import "fonts";
+
+@import "mixins/separator";
+
+@import "components/columns";
+@import "components/navbar";
+@import "components/block";
+@import "components/hero";
+@import "components/avatar";
+@import "components/card";
+@import "components/controls";
+
 @import "style";

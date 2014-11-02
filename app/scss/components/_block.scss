@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.block {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 40px 60px;
+
+	&:nth-child(even) {
+		background-color: $white;
+	}
+
+	&:nth-child(odd) {
+		background-color: $brown;
+	}
+
+	&-header {
+		text-align: center;
+		order: 1;
+	}
+
+	&-body {
+		order: 2;
+	}
+
+	.separator {
+		@include separator($red, 40px, 5px);
+		margin-bottom: 20px;
+	}
+
+	&-form {
+		background-color: $red;
+		width: 350px;
+		color: $white;
+		padding: 20px 50px;
+		border-radius: 5px;
+
+		.separator {
+			@include separator($white, 40px, 5px);
+			margin-bottom: 20px;
+		}
+	}
+
+}

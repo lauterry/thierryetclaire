@@ -1,35 +1,3 @@
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?ybtew9");
-  src: url("../fonts/icomoon.eot?#iefixybtew9") format("embedded-opentype"), url("../fonts/icomoon.woff?ybtew9") format("woff"), url("../fonts/icomoon.ttf?ybtew9") format("truetype"), url("../fonts/icomoon.svg?ybtew9#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-clock:before {
-  content: "\e601";
-}
-
-.icon-pin:before {
-  content: "\e600";
-}
-
-.icon-heart:before {
-  content: "\f004";
-}
-
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.1em;
@@ -101,13 +69,56 @@ button:hover {
   background-image: linear-gradient(#3c71bb, #255aa5);
 }
 
-.full-image-background {
-  height: 800px;
-  background: url(../img/photo-3-sepia.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?ybtew9");
+  src: url("../fonts/icomoon.eot?#iefixybtew9") format("embedded-opentype"), url("../fonts/icomoon.woff?ybtew9") format("woff"), url("../fonts/icomoon.ttf?ybtew9") format("truetype"), url("../fonts/icomoon.svg?ybtew9#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clock:before {
+  content: "\e601";
+}
+
+.icon-pin:before {
+  content: "\e600";
+}
+
+.icon-heart:before {
+  content: "\f004";
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  text-align: center;
+}
+.columns-main {
+  order: 1;
+}
+.columns-secondary {
+  order: 2;
+}
+.columns-third {
+  order: 3;
+}
+.columns-text {
+  margin: 0 80px;
 }
 
 .navbar {
@@ -231,26 +242,6 @@ button:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  text-align: center;
-}
-.columns-main {
-  order: 1;
-}
-.columns-secondary {
-  order: 2;
-}
-.columns-third {
-  order: 3;
-}
-.columns-text {
-  margin: 0 80px;
-}
-
 .card {
   margin-right: 20px;
   margin-left: 20px;
@@ -276,6 +267,37 @@ button:hover {
 }
 .card-text {
   margin-top: 20px;
+}
+
+.control-block {
+  margin-bottom: 20px;
+}
+.control-block-half {
+  display: inline-block;
+  width: 45%;
+}
+.control-block-half:nth-child(2) {
+  float: right;
+}
+.control-label {
+  display: block;
+  text-align: center;
+}
+.control-input {
+  width: 100%;
+  color: #962C42;
+}
+.control-actions {
+  text-align: center;
+}
+
+.full-image-background {
+  height: 800px;
+  background: url(../img/photo-3-sepia.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .address-title {
@@ -307,28 +329,6 @@ button:hover {
   align-items: flex-end;
   padding-top: 100px;
   padding-right: 100px;
-}
-
-.control-block {
-  margin-bottom: 20px;
-}
-.control-block-half {
-  display: inline-block;
-  width: 45%;
-}
-.control-block-half:nth-child(2) {
-  float: right;
-}
-.control-label {
-  display: block;
-  text-align: center;
-}
-.control-input {
-  width: 100%;
-  color: #962C42;
-}
-.control-actions {
-  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */

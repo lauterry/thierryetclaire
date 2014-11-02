@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.columns {
+	display : flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+	text-align: center;
+
+	&-main {
+		order: 1;
+	}
+
+	&-secondary {
+		order: 2;
+	}
+
+	&-third {
+		order: 3;
+	}
+
+	&-text {
+		margin:0 80px;
+	}
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.hero {
+	display : flex;
+	align-items: center;
+	justify-content: center;
+	color : $white;
+	padding-top: 280px;
+
+	&-header {
+		text-align: center;
+		font-size: 3em;
+
+		.separator {
+			@include separator($white, 200px, 20px);
+			font-size: 1em;
+		}
+	}
+
+	.date {
+		font-size: .8em;
+	}
+}
