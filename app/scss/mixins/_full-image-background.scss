@@ -1,0 +1,10 @@
+
+@charset "UTF-8";
+
+@mixin full-image-background($path) {
+	background: url($path) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

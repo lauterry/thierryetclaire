@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
 .full-image-background {
+	@include full-image-background('../img/photo-3-sepia.jpg');
 	height: 800px;
-	background: url(../img/photo-3-sepia.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 }
 
 .address {
@@ -32,12 +28,7 @@
 }
 
 .lifou {
-	height: 800px;
-	background: url(../img/lifou.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	@include full-image-background('../img/lifou.jpg');
 }
 
 .block.lifou {
@@ -46,4 +37,54 @@
 	align-items: flex-end;
 	padding-top: 100px;
 	padding-right: 100px;
+}
+
+.card-avatar {
+	margin: 0 50px 0 0;
+
+	&-image {
+		height: 200px;
+		border-radius: 500px;
+		float: right;
+		margin: 20px 0 0 50px;
+		transition : box-shadow .25s ease;
+		border : 2px solid $white;
+
+		&:hover {
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+		}
+	}
+
+	&-title, &-text, &-link {
+		text-align: right;
+	}
+
+	&-link {
+		display: block;
+	}
+
+	&-inverse {
+		margin: 0 0 0 50px;
+
+		&-image {
+			height: 200px;
+			border-radius: 500px;
+			float: left;
+			margin: 20px 50px 0 0;
+			transition : box-shadow .25s ease;
+			border : 2px solid $white;
+
+			&:hover {
+				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			}
+		}
+
+		&-title, &-text, &-link {
+			text-align: left;
+		}
+
+		&-link {
+			display: block;
+		}
+	}
 }

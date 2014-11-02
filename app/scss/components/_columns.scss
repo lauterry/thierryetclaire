@@ -2,24 +2,10 @@
 
 .columns {
 	display : flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: stretch;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-
-	&-main {
-		order: 1;
-	}
-
-	&-secondary {
-		order: 2;
-	}
-
-	&-third {
-		order: 3;
-	}
-
-	&-text {
-		margin:0 80px;
-	}
+	margin-bottom: 50px;
 }

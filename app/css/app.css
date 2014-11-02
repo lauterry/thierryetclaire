@@ -26,7 +26,6 @@ h3 {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 ul {
@@ -79,24 +78,34 @@ input {
   content: "\f004";
 }
 
-.columns {
+.rows {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: stretch;
   text-align: center;
 }
-.columns-main {
+.rows-main {
   order: 1;
 }
-.columns-secondary {
+.rows-secondary {
   order: 2;
 }
-.columns-third {
+.rows-third {
   order: 3;
 }
-.columns-text {
+.rows-text {
   margin: 0 80px;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .navbar {
@@ -123,6 +132,7 @@ input {
 .nav-item-link {
   color: white;
   font-size: 1.5em;
+  text-decoration: none;
 }
 .nav-item-link:hover {
   color: white;
@@ -202,7 +212,7 @@ input {
   align-items: center;
   justify-content: center;
   color: #fff;
-  padding-top: 280px;
+  padding-top: 415px;
 }
 .hero-header {
   text-align: center;
@@ -283,12 +293,12 @@ input {
 }
 
 .full-image-background {
-  height: 800px;
-  background: url(../img/photo-3-sepia.jpg) no-repeat center center fixed;
+  background: url("../img/photo-3-sepia.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 800px;
 }
 
 .address-title {
@@ -319,8 +329,7 @@ input {
 }
 
 .lifou {
-  height: 800px;
-  background: url(../img/lifou.jpg) no-repeat center center fixed;
+  background: url("../img/lifou.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -333,6 +342,47 @@ input {
   align-items: flex-end;
   padding-top: 100px;
   padding-right: 100px;
+}
+
+.card-avatar {
+  margin: 0 50px 0 0;
+}
+.card-avatar-image {
+  height: 200px;
+  border-radius: 500px;
+  float: right;
+  margin: 20px 0 0 50px;
+  transition: box-shadow .25s ease;
+  border: 2px solid #fff;
+}
+.card-avatar-image:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.card-avatar-title, .card-avatar-text, .card-avatar-link {
+  text-align: right;
+}
+.card-avatar-link {
+  display: block;
+}
+.card-avatar-inverse {
+  margin: 0 0 0 50px;
+}
+.card-avatar-inverse-image {
+  height: 200px;
+  border-radius: 500px;
+  float: left;
+  margin: 20px 50px 0 0;
+  transition: box-shadow .25s ease;
+  border: 2px solid #fff;
+}
+.card-avatar-inverse-image:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.card-avatar-inverse-title, .card-avatar-inverse-text, .card-avatar-inverse-link {
+  text-align: left;
+}
+.card-avatar-inverse-link {
+  display: block;
 }
 
 /*# sourceMappingURL=app.css.map */
