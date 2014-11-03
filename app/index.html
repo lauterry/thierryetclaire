@@ -169,31 +169,34 @@
 			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
 				class="separator-line"></span></p>
 		</header>
-		<form action="">
+		<form novalidate name="rsvpForm" ng-controller="rsvpController">
 			<div class="control-block">
 				<label class="control-label" for="name">Nom et prénom</label>
-				<input class="control-input" id="name" name="name" type="text"/>
+				<input class="control-input" id="name" name="name" type="text" ng-model="contact.name" required/>
+				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.name.$error.required">Hey, dis moi qui tu es ? :)</span>
 			</div>
 			<div class="control-block">
 				<label class="control-label" for="email">Email</label>
-				<input class="control-input" id="email" name="email" type="email"/>
+				<input class="control-input" id="email" name="email" ng-model="contact.email" type="email"/>
+				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.email.$error.email">Cet email ne semble pas correct :(</span>
 			</div>
 			<div class="control-block">
 				<label class="control-label" for="phone">Téléphone</label>
-				<input class="control-input" id="phone" name="phone" type="tel"/>
+				<input class="control-input" id="phone" name="phone" type="tel" ng-model="contact.phone" required/>
+				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.phone.$error.required">Un numéro où je peux te joindre ?</span>
 			</div>
 			<div class="control-block">
 				<div class="control-block-half">
 					<label class="control-label" for="adult">Adultes</label>
-					<input class="control-input" id="adult" type="tel"/>
+					<input class="control-input" id="adult" type="tel"  ng-model="contact.adults" required min="1"/>
 				</div>
 				<div class="control-block-half">
 					<label class="control-label" for="child">Enfants</label>
-					<input class="control-input" id="child" type="tel"/>
+					<input class="control-input" id="child" type="tel" ng-model="contact.children"/>
 				</div>
 			</div>
 			<div class="control-actions">
-				<button class="block-form-button">Je participe</button>
+				<button class="block-form-button" ng-click="sendResponse()"><i class="icon-send"></i> Je participe</button>
 			</div>
 		</form>
 	</section>
@@ -212,6 +215,7 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/services/geolocationService.js"></script>
 <script src="js/controllers/programmeController.js"></script>
+<script src="js/controllers/rsvpController.js"></script>
 <!-- endbuild -->
 
 </body>

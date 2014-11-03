@@ -1,388 +1,63 @@
-body {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.1em;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.65em;
-}
+/*
+Error: Invalid CSS after "}git": expected "{", was ""
+        on line 91 of app/scss/_style.scss
+        from line 18 of app/scss/app.scss
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montez", cursive;
-  line-height: 1.25em;
-  margin: 0;
-  text-rendering: optimizeLegibility;
-}
+86: 		&-link {
+87: 			display: block;
+88: 		}
+89: 	}
+90: }git
 
-h1 {
-  font-size: 2.475em;
-}
-
-h2 {
-  font-size: 2.2em;
-}
-
-h3 {
-  font-size: 1.925em;
-}
-
-a {
-  color: inherit;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-input {
-  border-radius: 2px;
-  border: none;
-  font-size: 1.5em;
-  padding: 12px 20px;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?ybtew9");
-  src: url("../fonts/icomoon.eot?#iefixybtew9") format("embedded-opentype"), url("../fonts/icomoon.woff?ybtew9") format("woff"), url("../fonts/icomoon.ttf?ybtew9") format("truetype"), url("../fonts/icomoon.svg?ybtew9#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-clock:before {
-  content: "\e601";
-}
-
-.icon-pin:before {
-  content: "\e600";
-}
-
-.icon-heart:before {
-  content: "\f004";
-}
-
-.rows {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  text-align: center;
-}
-.rows-main {
-  order: 1;
-}
-.rows-secondary {
-  order: 2;
-}
-.rows-third {
-  order: 3;
-}
-.rows-text {
-  margin: 0 80px;
-}
-
-.columns {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.navbar {
-  background-color: #962C42;
-  min-height: 90px;
-  padding: 0 200px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.nav {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-.nav-item {
-  height: 90px;
-  line-height: 90px;
-  padding: 0 20px;
-  transition: background-color .25s ease-in-out;
-}
-.nav-item-link {
-  color: white;
-  font-size: 1.5em;
-  text-decoration: none;
-}
-.nav-item-link:hover {
-  color: white;
-}
-.nav-item-img {
-  height: 60px;
-  margin-top: 15px;
-}
-.nav-item:hover {
-  background-color: #762334;
-  cursor: pointer;
-}
-
-.block {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 40px 60px;
-}
-.block:nth-child(even) {
-  background-color: #fff;
-}
-.block:nth-child(odd) {
-  background-color: #f5f4ec;
-}
-.block-header {
-  text-align: center;
-  order: 1;
-}
-.block-body {
-  order: 2;
-}
-.block .separator {
-  color: #962C42;
-  margin-bottom: 20px;
-}
-.block .separator-line {
-  border: 0;
-  border-top: 1px solid #962C42;
-  display: inline-block;
-  margin: 5px 10px;
-  width: 40px;
-}
-.block-form {
-  background-color: #962C42;
-  width: 350px;
-  color: #fff;
-  padding: 20px 50px;
-  border-radius: 5px;
-}
-.block-form .separator {
-  color: #fff;
-  margin-bottom: 20px;
-}
-.block-form .separator-line {
-  border: 0;
-  border-top: 1px solid #fff;
-  display: inline-block;
-  margin: 5px 10px;
-  width: 40px;
-}
-.block-form-button {
-  color: #fff;
-  padding: 7px 18px;
-  -webkit-font-smoothing: antialiased;
-  border-radius: 3px;
-  border: 1px solid #196EAB;
-  background-color: #196EAB;
-}
-.block-form-button:hover {
-  background-color: #166095;
-  border: 1px solid #166095;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  padding-top: 415px;
-}
-.hero-header {
-  text-align: center;
-  font-size: 3em;
-}
-.hero-header .separator {
-  color: #fff;
-  font-size: 1em;
-}
-.hero-header .separator-line {
-  border: 0;
-  border-top: 1px solid #fff;
-  display: inline-block;
-  margin: 20px 10px;
-  width: 200px;
-}
-.hero .date {
-  font-size: .8em;
-}
-
-.avatar {
-  border-radius: 500px;
-  height: 300px;
-  border: 2px solid #fff;
-  transition: box-shadow .25s ease;
-}
-.avatar:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.card {
-  margin-right: 20px;
-  margin-left: 20px;
-  padding-bottom: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  transition: box-shadow .25s ease;
-}
-.card:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.card-body {
-  padding: 10px;
-}
-.card-img {
-  max-width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-.card-title {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.3em;
-}
-.card-text {
-  margin-top: 20px;
-}
-
-.control-block {
-  margin-bottom: 20px;
-}
-.control-block-half {
-  display: inline-block;
-  width: 45%;
-}
-.control-block-half:nth-child(2) {
-  float: right;
-}
-.control-label {
-  display: block;
-  text-align: center;
-}
-.control-input {
-  width: 100%;
-  color: #962C42;
-}
-.control-actions {
-  text-align: center;
-}
-
-.full-image-background {
-  background: url("../img/photo-3-sepia.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 800px;
-}
-
-.address-title {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1em;
-}
-.address-text {
-  margin-bottom: 0;
-}
-.address-button {
-  color: #fff;
-  padding: 7px 18px;
-  -webkit-font-smoothing: antialiased;
-  border-radius: 3px;
-  border: 1px solid #962C42;
-  background-color: #962C42;
-  margin-top: 15px;
-}
-.address-button:hover {
-  background-color: #822639;
-  border: 1px solid #822639;
-}
-
-.time {
-  color: #962C42;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.lifou {
-  background: url("../img/lifou.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.block.lifou {
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-top: 100px;
-  padding-right: 100px;
-}
-
-.card-avatar {
-  margin: 0 50px 0 0;
-}
-.card-avatar-image {
-  height: 200px;
-  border-radius: 500px;
-  float: right;
-  margin: 20px 0 0 50px;
-  transition: box-shadow .25s ease;
-  border: 2px solid #fff;
-}
-.card-avatar-image:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.card-avatar-title, .card-avatar-text, .card-avatar-link {
-  text-align: right;
-}
-.card-avatar-link {
-  display: block;
-}
-.card-avatar-inverse {
-  margin: 0 0 0 50px;
-}
-.card-avatar-inverse-image {
-  height: 200px;
-  border-radius: 500px;
-  float: left;
-  margin: 20px 50px 0 0;
-  transition: box-shadow .25s ease;
-  border: 2px solid #fff;
-}
-.card-avatar-inverse-image:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.card-avatar-inverse-title, .card-avatar-inverse-text, .card-avatar-inverse-link {
-  text-align: left;
-}
-.card-avatar-inverse-link {
-  display: block;
-}
-
-/*# sourceMappingURL=app.css.map */
+Backtrace:
+app/scss/_style.scss:91
+app/scss/app.scss:18
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1163:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1099:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:1094:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:641:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:635:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:660:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:653:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:393:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:299:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:307:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:306:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/exec/sass_scss.rb:375:in `run'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/exec/base.rb:40:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.2/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"}git\": expected \"{\", was \"\"\A         on line 91 of app/scss/_style.scss\A         from line 18 of app/scss/app.scss\A \A 86: 		&-link {\A 87: 			display: block;\A 88: 		}\A 89: 	}\A 90: }git"; }
