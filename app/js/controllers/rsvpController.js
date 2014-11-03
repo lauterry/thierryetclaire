@@ -1,4 +1,4 @@
-angular.module('ThierryEtClaire').controller('rsvpController', function ($scope) {
+angular.module('ThierryEtClaire').controller('rsvpController', function ($scope, $log) {
     "use strict";
 
 	$scope.contact = {
@@ -8,9 +8,8 @@ angular.module('ThierryEtClaire').controller('rsvpController', function ($scope)
 
 	$scope.sendResponse = function () {
 		if ($scope.rsvpForm.$valid) {
-			console.log(JSON.stringify($scope.contact));
+			$log(JSON.stringify($scope.contact));
 		}
-
 	};
 
 });

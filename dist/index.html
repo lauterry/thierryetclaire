@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/caf6ec36.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/954aa310.ThierryEtClaire.css"/>
 
     <link href='https://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -68,7 +68,7 @@
 	</section>
 </section>
 
-<section class="block">
+<section class="block" ng-controller="programmeController">
 	<header class="block-header">
 		<h1>Festivités</h1>
 
@@ -78,68 +78,17 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section class="column-main">
+			<section ng-repeat="step in steps">
 				<div class="card">
-					<img class="card-img" src="img/mairie-bezannes.jpg" alt=""/>
+					<img class="card-img" ng-src="{{::step.image}}" alt=""/>
 					<div class="card-body">
-						<h1 class="card-title">Cérémonie civile</h1>
-						<p class="time">11h00</p>
+						<h1 class="card-title">{{::step.name}}</h1>
+						<p class="time">{{::step.when.time}}</p>
 						<div class="card-text">
 							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="column-secondary">
-				<div class="card">
-					<img class="card-img" src="img/eglise-bezannes.jpg" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">Cérémonie réligieuse</h1>
-						<p class="time">15h00</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="column-third">
-				<div class="card">
-					<img class="card-img" src="img/vilmart.jpg" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">Vin d'honneur</h1>
-						<p class="time">16h00</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="column-third">
-				<div class="card">
-					<img class="card-img" src="img/vilmart.jpg" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">Diner de mariage</h1>
-						<p class="time">20h00</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
+								<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
+								<p class="address-text">{{::step.location.address1}}</p>
+								<p class="address-text">{{::step.location.address2}}</p>
 								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
 							</div>
 						</div>
@@ -215,31 +164,34 @@
 			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
 				class="separator-line"></span></p>
 		</header>
-		<form action="">
+		<form novalidate name="rsvpForm" ng-controller="rsvpController">
 			<div class="control-block">
 				<label class="control-label" for="name">Nom et prénom</label>
-				<input class="control-input" id="name" name="name" type="text"/>
+				<input class="control-input" id="name" name="name" type="text" ng-model="contact.name" required/>
+				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.name.$error.required">Hey, dis moi qui tu es ? :)</span>
 			</div>
 			<div class="control-block">
 				<label class="control-label" for="email">Email</label>
-				<input class="control-input" id="email" name="email" type="email"/>
+				<input class="control-input" id="email" name="email" ng-model="contact.email" type="email"/>
+				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.email.$error.email">Cet email ne semble pas correct :(</span>
 			</div>
 			<div class="control-block">
 				<label class="control-label" for="phone">Téléphone</label>
-				<input class="control-input" id="phone" name="phone" type="tel"/>
+				<input class="control-input" id="phone" name="phone" type="tel" ng-model="contact.phone" required/>
+				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.phone.$error.required">Un numéro où je peux te joindre ?</span>
 			</div>
 			<div class="control-block">
 				<div class="control-block-half">
 					<label class="control-label" for="adult">Adultes</label>
-					<input class="control-input" id="adult" type="tel"/>
+					<input class="control-input" id="adult" type="tel"  ng-model="contact.adults" required min="1"/>
 				</div>
 				<div class="control-block-half">
 					<label class="control-label" for="child">Enfants</label>
-					<input class="control-input" id="child" type="tel"/>
+					<input class="control-input" id="child" type="tel" ng-model="contact.children"/>
 				</div>
 			</div>
 			<div class="control-actions">
-				<button class="block-form-button">Je participe</button>
+				<button class="block-form-button" ng-click="sendResponse()"><i class="icon-send"></i> Je participe</button>
 			</div>
 		</form>
 	</section>
@@ -249,7 +201,7 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 
-<script src="js/1a0a42d0.ThierryEtClaire.js"></script>
+<script src="js/beac9ebd.ThierryEtClaire.js"></script>
 
 </body>
 </html>
