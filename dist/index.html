@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/954aa310.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/9b9eed7a.ThierryEtClaire.css"/>
 
     <link href='https://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -157,56 +157,70 @@
 	</section>
 </section>
 
-<section class="block lifou" id="rsvp">
-	<section class="block-form">
-		<header class="block-header">
-			<h1>RVSP</h1>
-			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
-				class="separator-line"></span></p>
-		</header>
-		<form novalidate name="rsvpForm" ng-controller="rsvpController">
-			<div class="control-block">
-				<label class="control-label" for="name">Nom et prénom</label>
-				<input class="control-input" id="name" name="name" type="text" ng-model="contact.name" required/>
-				<!-- entry.19589932 -->
-				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.name.$error.required">Hey, dis moi qui tu es ? :)</span>
+<section class="block lifou" id="rsvp" ng-controller="rsvpController">
+	<div class="flip-container">
+		<div class="flip-card" ng-class="{'flipped' : flip}">
+			<div class="flip-card-item front">
+				<section class="block-form">
+					<header class="block-header">
+						<h1>RSVP</h1>
+						<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
+							class="separator-line"></span></p>
+					</header>
+					<form novalidate name="rsvpForm">
+						<div class="control-block">
+							<label class="control-label" for="name">Nom et prénom</label>
+							<input class="control-input" id="name" name="name" type="text" ng-model="contact.name" required/>
+							<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.name.$error.required">Hey, dis moi qui tu es ? :)</span>
+						</div>
+						<div class="control-block">
+							<label class="control-label" for="email">Email</label>
+							<input class="control-input" id="email" name="email" ng-model="contact.email" type="email"/>
+							<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.email.$error.email">Cet email ne semble pas correct :(</span>
+						</div>
+						<div class="control-block">
+							<label class="control-label" for="phone">Téléphone</label>
+							<input class="control-input" id="phone" name="phone" type="tel" ng-model="contact.phone" required/>
+							<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.phone.$error.required">Un numéro où je peux te joindre ?</span>
+						</div>
+						<div class="control-block">
+							<div class="control-block-half">
+								<label class="control-label" for="adult">Adultes</label>
+								<input class="control-input" id="adult" type="tel"  ng-model="contact.adults" required min="1"/>
+							</div>
+							<div class="control-block-half">
+								<label class="control-label" for="child">Enfants</label>
+								<input class="control-input" id="child" type="tel" ng-model="contact.children"/>
+							</div>
+						</div>
+						<div class="control-actions">
+							<button class="block-form-button" ng-click="sendResponse()"><i class="icon-send"></i> Je participe</button>
+						</div>
+					</form>
+				</section>
 			</div>
-			<div class="control-block">
-				<label class="control-label" for="email">Email</label>
-				<input class="control-input" id="email" name="email" ng-model="contact.email" type="email"/>
-				<!-- entry.136525631 -->
-				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.email.$error.email">Cet email ne semble pas correct :(</span>
+			<div class="flip-card-item back">
+				<section class="block-form-message">
+					<i class="icon-refresh flip-button" ng-click="flipAndClear()"></i>
+					<header class="block-form-message-title">
+						<h1>Super !</h1>
+					</header>
+					<section class="block-form-message-body">
+						<p>Nous avons bien enregistré votre réponse.</p>
+						<p>Nous avons hâte de vous voir ce jour là !</p>
+						<p>A très bientôt !</p>
+					</section>
+				</section>
 			</div>
-			<div class="control-block">
-				<label class="control-label" for="phone">Téléphone</label>
-				<input class="control-input" id="phone" name="phone" type="tel" ng-model="contact.phone" required/>
-				<!-- entry.369118585 -->
-				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.phone.$error.required">Un numéro où je peux te joindre ?</span>
-			</div>
-			<div class="control-block">
-				<div class="control-block-half">
-					<label class="control-label" for="adult">Adultes</label>
-					<input class="control-input" id="adult" type="tel"  ng-model="contact.adults" required min="1"/>
-					<!-- entry.1589868583 -->
-				</div>
-				<div class="control-block-half">
-					<label class="control-label" for="child">Enfants</label>
-					<input class="control-input" id="child" type="tel" ng-model="contact.children"/>
-					<!-- entry.1254531879 -->
-				</div>
-			</div>
-			<div class="control-actions">
-				<button class="block-form-button" ng-click="sendResponse()"><i class="icon-send"></i> Je participe</button>
-			</div>
-		</form>
-	</section>
+		</div>
+	</div>
 </section>
 
 <script type="text/javascript"
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBkWq_y9-Y3JRYv5PGbkvyEzRVI75fA1o&sensor=false">
 </script>
 
-<script src="js/6f299268.ThierryEtClaire.js"></script>
+<script src="js/b0669f42.ThierryEtClaire.js"></script>
 
 </body>
 </html>
