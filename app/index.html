@@ -173,26 +173,31 @@
 			<div class="control-block">
 				<label class="control-label" for="name">Nom et prénom</label>
 				<input class="control-input" id="name" name="name" type="text" ng-model="contact.name" required/>
+				<!-- entry.19589932 -->
 				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.name.$error.required">Hey, dis moi qui tu es ? :)</span>
 			</div>
 			<div class="control-block">
 				<label class="control-label" for="email">Email</label>
 				<input class="control-input" id="email" name="email" ng-model="contact.email" type="email"/>
+				<!-- entry.136525631 -->
 				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.email.$error.email">Cet email ne semble pas correct :(</span>
 			</div>
 			<div class="control-block">
 				<label class="control-label" for="phone">Téléphone</label>
 				<input class="control-input" id="phone" name="phone" type="tel" ng-model="contact.phone" required/>
+				<!-- entry.369118585 -->
 				<span class="help-block" ng-show="rsvpForm.$submitted && rsvpForm.phone.$error.required">Un numéro où je peux te joindre ?</span>
 			</div>
 			<div class="control-block">
 				<div class="control-block-half">
 					<label class="control-label" for="adult">Adultes</label>
 					<input class="control-input" id="adult" type="tel"  ng-model="contact.adults" required min="1"/>
+					<!-- entry.1589868583 -->
 				</div>
 				<div class="control-block-half">
 					<label class="control-label" for="child">Enfants</label>
 					<input class="control-input" id="child" type="tel" ng-model="contact.children"/>
+					<!-- entry.1254531879 -->
 				</div>
 			</div>
 			<div class="control-actions">
@@ -208,6 +213,7 @@
 
 <!-- build:js js/ThierryEtClaire.js -->
 <!-- bower:js -->
+<script src="vendor/jquery/dist/jquery.js"></script>
 <script src="vendor/angular/angular.js"></script>
 <script src="vendor/underscore/underscore.js"></script>
 <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
