@@ -73,7 +73,7 @@
 	</section>
 </section>
 
-<section class="block">
+<section class="block" ng-controller="programmeController">
 	<header class="block-header">
 		<h1>Festivités</h1>
 
@@ -83,68 +83,17 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section class="column-main">
+			<section ng-repeat="step in steps">
 				<div class="card">
-					<img class="card-img" src="img/mairie-bezannes.jpg" alt=""/>
+					<img class="card-img" ng-src="{{::step.image}}" alt=""/>
 					<div class="card-body">
-						<h1 class="card-title">Cérémonie civile</h1>
-						<p class="time">11h00</p>
+						<h1 class="card-title">{{::step.name}}</h1>
+						<p class="time">{{::step.when.time}}</p>
 						<div class="card-text">
 							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="column-secondary">
-				<div class="card">
-					<img class="card-img" src="img/eglise-bezannes.jpg" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">Cérémonie réligieuse</h1>
-						<p class="time">15h00</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="column-third">
-				<div class="card">
-					<img class="card-img" src="img/vilmart.jpg" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">Vin d'honneur</h1>
-						<p class="time">16h00</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="column-third">
-				<div class="card">
-					<img class="card-img" src="img/vilmart.jpg" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">Diner de mariage</h1>
-						<p class="time">20h00</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>Mairie de Bezannes</h1>
-								<p class="address-text">1 rue Source de Muire</p>
-								<p class="address-text">51726 Bezannes</p>
+								<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
+								<p class="address-text">{{::step.location.address1}}</p>
+								<p class="address-text">{{::step.location.address2}}</p>
 								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
 							</div>
 						</div>
@@ -257,12 +206,12 @@
 <!-- build:js js/ThierryEtClaire.js -->
 <!-- bower:js -->
 <script src="vendor/angular/angular.js"></script>
-<script src="vendor/angular-touch/angular-touch.js"></script>
 <script src="vendor/underscore/underscore.js"></script>
 <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/services/geolocationService.js"></script>
+<script src="js/controllers/programmeController.js"></script>
 <!-- endbuild -->
 
 </body>

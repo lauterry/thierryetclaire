@@ -18,7 +18,7 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		},
 		when : {
 			date: "Samedi 13 Juin 2015",
-			time: "11H30"
+			time: "11H00"
 		},
 		image : 'img/mairie-bezannes.jpg'
 	}, {
@@ -38,7 +38,7 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		},
 		when : {
 			date: "Samedi 13 Juin 2015",
-			time: "12H30"
+			time: "15H00"
 		},
 		image : 'img/eglise-bezannes.jpg'
 	}, {
@@ -58,7 +58,27 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		},
 		when : {
 			date: "Samedi 13 Juin 2015",
-			time: "13H30"
+			time: "16H00"
+		},
+		image : 'img/vilmart.jpg'
+	}, {
+		name: "Vin d'Honneur",
+		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
+		location : {
+			name: "Salle Hélios à la Mairie de Bezannes",
+			address1: "Mairie, 1 Rue Source de Muire",
+			address2: "51430 Bezannes",
+			map : {
+				center : {
+					latitude: 49.2201195,
+					longitude: 3.9859497
+				},
+				zoom: 16
+			}
+		},
+		when : {
+			date: "Samedi 13 Juin 2015",
+			time: "16H00"
 		},
 		image : 'img/vilmart.jpg'
 	}];
