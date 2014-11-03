@@ -66,10 +66,6 @@ input {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-clock:before {
-  content: "\e601";
-}
-
 .icon-pin:before {
   content: "\e600";
 }
@@ -78,16 +74,12 @@ input {
   content: "\f004";
 }
 
-.icon-close:before {
-  content: "\f00d";
+.icon-refresh:before {
+  content: "\f021";
 }
 
 .icon-send:before {
   content: "\f1d8";
-}
-
-.icon-send-o:before {
-  content: "\f1d9";
 }
 
 .rows {
@@ -218,6 +210,19 @@ input {
   background-color: #166095;
   border: 1px solid #166095;
 }
+.block-form-message {
+  background-color: #1BA1C0;
+  width: 450px;
+  height: 646px;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 200px;
+  font-size: 1.1em;
+}
+.block-form-message-title {
+  margin-bottom: 20px;
+}
 
 .hero {
   display: flex;
@@ -304,6 +309,60 @@ input {
   text-align: center;
 }
 
+.flip-container {
+  perspective: 1000px;
+}
+.flip-card {
+  width: 450px;
+  height: 646px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  position: relative;
+}
+.flip-card-item {
+  width: 450px;
+  height: 646px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card-item.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.flip-card-item.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+.flip-card-item.back .flip-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8em;
+  -webkit-transition: transform 0.25s;
+  -moz-transition: transform 0.25s;
+  -ms-transition: transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+}
+.flip-card-item.back .flip-button:hover {
+  cursor: pointer;
+  transform-origin: 50% 50%;
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
 .full-image-background {
   background: url("../img/photo-3-sepia.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -354,6 +413,7 @@ input {
   align-items: flex-end;
   padding-top: 80px;
   padding-right: 100px;
+  height: 700px;
 }
 
 .card-avatar {

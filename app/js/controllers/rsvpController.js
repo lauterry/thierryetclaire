@@ -6,7 +6,10 @@ angular.module('ThierryEtClaire').controller('rsvpController', function ($scope,
 		children: 0
 	};
 
+	$scope.flip = false;
+
 	$scope.sendResponse = function () {
+
 		if ($scope.rsvpForm.$valid) {
 			var data = {
 				"entry.19589932": $scope.contact.name,
@@ -16,12 +19,21 @@ angular.module('ThierryEtClaire').controller('rsvpController', function ($scope,
 				"entry.1254531879": $scope.contact.children
 			};
 
-			googleForm.save(data).success(function (data) {
-				// TODO
-			}).error(function (error) {
-				// TODO
+			googleForm.save(data).success(function () {
+				$scope.flip = !$scope.flip;
+			}).error(function () {
+				$scope.flip = !$scope.flip;
 			});
 		}
+	};
+
+	$scope.flipAndClear = function () {
+		$scope.flip = false;
+		$scope.contact = {
+			adults: 1,
+			children: 0
+		};
+		$scope.rsvpForm.$setPristine();
 	};
 
 });

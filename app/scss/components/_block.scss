@@ -44,6 +44,21 @@
 			@include button($blue);
 		}
 
+		&-message {
+			background-color: #1BA1C0;
+			width: 450px;
+			height: 646px;
+			color: $white;
+			box-sizing: border-box;
+			text-align: center;
+			padding-top: 200px;
+			font-size: 1.1em;
+
+			&-title {
+				margin-bottom: 20px;
+			}
+		}
+
 	}
 
 }
