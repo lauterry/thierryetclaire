@@ -32,26 +32,26 @@
 <header class="navbar">
 	<ul class="nav">
 		<li class="nav-item">
-			<a class="nav-item-link" href="">Nous</a>
+			<a class="nav-item-link" href="#nous">Nous</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-item-link" href="">Programme</a>
+			<a class="nav-item-link" href="#festivites">Festivités</a>
 		</li>
 		<li class="nav-item">
 			<img class="nav-item-img" src="img/double-bonheur-white.png" alt=""/>
 		</li>
 		<li class="nav-item">
-			<a class="nav-item-link" href="">Sponsor</a>
+			<a class="nav-item-link" href="#artisans">Artisans</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-item-link" href="">RSVP</a>
+			<a class="nav-item-link" href="#rsvp">RSVP</a>
 		</li>
 	</ul>
 </header>
 
 <!--section.block>header.block-header>h1{Festivités}+p.separator>span.separator-line+i.icon-heart+span.separator-line-->
 
-<section class="block">
+<section class="block" id="nous">
 	<header class="block-header">
 		<h1>Nous</h1>
 		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
@@ -73,7 +73,7 @@
 	</section>
 </section>
 
-<section class="block" ng-controller="programmeController">
+<section class="block" ng-controller="programmeController" id="festivites">
 	<header class="block-header">
 		<h1>Festivités</h1>
 
@@ -104,7 +104,7 @@
 	</section>
 </section>
 
-<section class="block">
+<section class="block" id="artisans">
 	<header class="block-header">
 		<h1>Nos artistes et artisans</h1>
 
@@ -162,7 +162,7 @@
 	</section>
 </section>
 
-<section class="block lifou">
+<section class="block lifou" id="rsvp">
 	<section class="block-form">
 		<header class="block-header">
 			<h1>RVSP</h1>
