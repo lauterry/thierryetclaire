@@ -17,7 +17,7 @@ angular.module('ThierryEtClaire').controller('rsvpController', function ($scope,
 			};
 
 			$.ajax({
-				url: "https://docs.google.com/a/cryptic-cliffs-7610.herokuapp.com/forms/d/1YcaMZ7ld_p8ZfHJYH4JiUrzV1UZ-j365Qyf_xl9Gf2Q/formResponse",
+				url: "https://docs.google.com/a/herokuapp.com/forms/d/1YcaMZ7ld_p8ZfHJYH4JiUrzV1UZ-j365Qyf_xl9Gf2Q/formResponse",
 				data: data,
 				type: "POST",
 				dataType: "xml",
