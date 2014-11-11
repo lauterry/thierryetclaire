@@ -6,11 +6,11 @@
 	flex-direction: column;
 	padding: 40px 60px;
 
-	&:nth-child(even) {
+	&:nth-child(odd) {
 		background-color: $white;
 	}
 
-	&:nth-child(odd) {
+	&:nth-child(even) {
 		background-color: $brown;
 	}
 
