@@ -45,7 +45,7 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		name: "Vin d'Honneur",
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
-			name: "Salle Hélios à la Mairie de Bezannes",
+			name: "Salle des fêtes de Bezannes",
 			address1: "Mairie, 1 Rue Source de Muire",
 			address2: "51430 Bezannes",
 			map : {
@@ -62,10 +62,10 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		},
 		image : 'img/vilmart.jpg'
 	}, {
-		name: "Vin d'Honneur",
+		name: "Dîner de mariage",
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
-			name: "Salle Hélios à la Mairie de Bezannes",
+			name: "Maison Vilmart",
 			address1: "Mairie, 1 Rue Source de Muire",
 			address2: "51430 Bezannes",
 			map : {
@@ -78,7 +78,7 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		},
 		when : {
 			date: "Samedi 13 Juin 2015",
-			time: "16H00"
+			time: "20H00"
 		},
 		image : 'img/vilmart.jpg'
 	}];

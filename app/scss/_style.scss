@@ -40,52 +40,77 @@
 	height: 700px;
 }
 
-.card-avatar {
-	margin: 0 50px 0 0;
+@mixin card-avatar($orientation) {
 
 	&-image {
 		height: 200px;
 		border-radius: 500px;
-		float: right;
-		margin: 20px 0 0 50px;
-		transition : box-shadow .25s ease;
-		border : 2px solid $white;
+		border: 2px solid $white;
+		transition: box-shadow .25s ease;
+
+		@if $orientation == 'right' {
+			float: right;
+			margin-left: 40px;
+		} @else if $orientation == 'left' {
+			float: left;
+			margin-right: 40px;
+		} @else if $orientation == 'top' {
+
+		}
 
 		&:hover {
-			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		}
+
+		&_small {
+			height : 150px;
+			border-radius: 500px;
+			border: 2px solid $white;
+			transition: box-shadow .25s ease;
+			&:hover {
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			}
 		}
 	}
 
 	&-title, &-text, &-link {
-		text-align: right;
+
+		@if $orientation == 'right' {
+			text-align: right;
+		} @else if $orientation == 'left'{
+			text-align: left;
+		} @else if $orientation == 'top' {
+
+		}
+
+
+	}
+
+	&-title {
+		&_small {
+			font-size: 1.5em;
+		}
+	}
+
+	&-text {
+		&_small {
+			font-size: 0.9em;
+		}
 	}
 
 	&-link {
 		display: block;
 	}
+}
 
-	&-inverse {
-		margin: 0 0 0 50px;
+.card-avatar-right {
+	@include card-avatar('right');
+}
 
-		&-image {
-			height: 200px;
-			border-radius: 500px;
-			float: left;
-			margin: 20px 50px 0 0;
-			transition : box-shadow .25s ease;
-			border : 2px solid $white;
+.card-avatar-left {
+	@include card-avatar('left');
+}
 
-			&:hover {
-				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-			}
-		}
-
-		&-title, &-text, &-link {
-			text-align: left;
-		}
-
-		&-link {
-			display: block;
-		}
-	}
+.card-avatar-top {
+	@include card-avatar('top');
 }
