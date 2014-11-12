@@ -156,10 +156,10 @@ input {
   flex-direction: column;
   padding: 40px 60px;
 }
-.block:nth-child(even) {
+.block:nth-child(odd) {
   background-color: #fff;
 }
-.block:nth-child(odd) {
+.block:nth-child(even) {
   background-color: #f5f4ec;
 }
 .block-header {
