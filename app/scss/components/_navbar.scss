@@ -3,9 +3,17 @@
 .navbar {
 	background-color: $red;
 	min-height: 90px;
-	padding: 0 200px;
+	padding: 0 100px;
 	box-sizing: border-box;
 	display: block;
+
+	@media (max-width: 950px){
+		padding: 0 50px;
+	}
+
+	@media (max-width: 650px){
+		padding: 0 20px;
+	}
 }
 
 .nav {

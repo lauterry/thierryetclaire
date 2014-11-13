@@ -3,6 +3,11 @@
 .full-image-background {
 	@include full-image-background('../img/photo-3-sepia.jpg');
 	height: 800px;
+
+	@media (max-width: 950px){
+		height: 470px;
+	}
+
 }
 
 .address {

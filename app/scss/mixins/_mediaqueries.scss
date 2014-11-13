@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == "mobile" {
+		@media (max-width: 360px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "tablet" {
+		@media (max-width: 900px)  {
+			@content;
+		}
+	}
+}

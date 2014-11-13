@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-@mixin separator($color, $width, $top) {
+@mixin separator($color, $width, $margin-top) {
 	color : $color;
 	&-line {
 		border: 0;
 		border-top: 1px solid $color;
 		display: inline-block;
-		margin: $top 10px;
+		margin: $margin-top 10px;
 		width: $width;
 	}
 }
