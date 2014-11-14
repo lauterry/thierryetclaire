@@ -37,12 +37,14 @@
 }
 
 .block.lifou {
-	justify-content: flex-start;
-	flex-direction: column;
-	align-items: flex-end;
-	padding-top: 80px;
-	padding-right: 100px;
+	position: relative;
 	height: 700px;
+
+	> .flip-container {
+		position: absolute;
+		right: 40px;
+		top: 90px;
+	}
 }
 
 @mixin card-avatar($orientation) {

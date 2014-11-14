@@ -89,6 +89,11 @@ input {
   align-items: stretch;
   text-align: center;
 }
+@media (max-width: 650px) {
+  .rows {
+    flex-direction: column;
+  }
+}
 .rows-item {
   margin: 0 50px 20px 0;
 }
@@ -161,10 +166,12 @@ input {
 }
 
 .block {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   padding: 40px 60px;
+}
+@media (max-width: 650px) {
+  .block {
+    padding: 40px 10px;
+  }
 }
 .block:nth-child(odd) {
   background-color: #fff;
@@ -174,10 +181,6 @@ input {
 }
 .block-header {
   text-align: center;
-  order: 1;
-}
-.block-body {
-  order: 2;
 }
 .block .separator {
   color: #962C42;
@@ -312,6 +315,13 @@ input {
   background-color: #fff;
   border-radius: 10px;
   transition: box-shadow .25s ease;
+}
+@media (max-width: 650px) {
+  .card {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 .card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -458,12 +468,13 @@ input {
 }
 
 .block.lifou {
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-top: 80px;
-  padding-right: 100px;
+  position: relative;
   height: 700px;
+}
+.block.lifou > .flip-container {
+  position: absolute;
+  right: 40px;
+  top: 90px;
 }
 
 .card-avatar-right-image {
