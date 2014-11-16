@@ -178,7 +178,7 @@ input {
 }
 
 .block {
-  padding: 40px 60px;
+  padding: 40px 20px;
 }
 @media (max-width: 650px) {
   .block {
@@ -321,17 +321,18 @@ input {
 }
 
 .card {
-  margin-right: 20px;
-  margin-left: 20px;
   padding-bottom: 20px;
   background-color: #fff;
   border-radius: 10px;
   transition: box-shadow .25s ease;
 }
+@media (max-width: 950px) {
+  .card {
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 650px) {
   .card {
-    margin-right: 0;
-    margin-left: 0;
     margin-top: 20px;
   }
 }
@@ -489,16 +490,16 @@ input {
   top: 90px;
 }
 
-#artisans .rows-item {
+#artisans .rows-item, #festivites .rows-item {
   width: 20%;
 }
 @media (max-width: 950px) {
-  #artisans .rows-item {
-    width: 40%;
+  #artisans .rows-item, #festivites .rows-item {
+    width: 45%;
   }
 }
 @media (max-width: 650px) {
-  #artisans .rows-item {
+  #artisans .rows-item, #festivites .rows-item {
     width: 100%;
   }
 }

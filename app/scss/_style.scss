@@ -47,12 +47,12 @@
 	}
 }
 
-#artisans {
+#artisans, #festivites {
 	.rows-item {
 		width: 20%;
 
 		@media (max-width: 950px){
-			width: 40%;
+			width: 45%;
 		}
 
 		@media (max-width: 650px){

@@ -83,23 +83,21 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section ng-repeat="step in steps">
-				<div class="card">
-					<img class="card-img" ng-src="{{::step.image}}" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">{{::step.name}}</h1>
-						<p class="time">{{::step.when.time}}</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
-								<p class="address-text">{{::step.location.address1}}</p>
-								<p class="address-text">{{::step.location.address2}}</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
+			<div class="rows-item card" ng-repeat="step in steps">
+				<img class="card-img" ng-src="{{::step.image}}" alt=""/>
+				<div class="card-body">
+					<h1 class="card-title">{{::step.name}}</h1>
+					<p class="time">{{::step.when.time}}</p>
+					<div class="card-text">
+						<div class="address">
+							<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
+							<p class="address-text">{{::step.location.address1}}</p>
+							<p class="address-text">{{::step.location.address2}}</p>
+							<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</section>
 	</section>
 </section>
