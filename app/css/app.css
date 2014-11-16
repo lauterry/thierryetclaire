@@ -85,6 +85,7 @@ input {
 .rows {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: stretch;
   text-align: center;
@@ -100,6 +101,7 @@ input {
 @media (max-width: 650px) {
   .rows-item {
     margin: 0 0 40px;
+    width: 100%;
   }
 }
 .rows-item:last-child {
@@ -502,6 +504,20 @@ input {
   position: absolute;
   right: 40px;
   top: 90px;
+}
+
+#artisans .rows-item {
+  width: 20%;
+}
+@media (max-width: 950px) {
+  #artisans .rows-item {
+    width: 40%;
+  }
+}
+@media (max-width: 650px) {
+  #artisans .rows-item {
+    width: 100%;
+  }
 }
 
 .card-avatar-right-image {

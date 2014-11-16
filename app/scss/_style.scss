@@ -47,6 +47,21 @@
 	}
 }
 
+#artisans {
+	.rows-item {
+		width: 20%;
+
+		@media (max-width: 950px){
+			width: 40%;
+		}
+
+		@media (max-width: 650px){
+			width: 100%
+		}
+
+	}
+}
+
 @mixin card-avatar($orientation) {
 
 	&-image {

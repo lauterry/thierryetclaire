@@ -3,6 +3,7 @@
 .rows {
 	display : flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: stretch;
 	text-align: center;
@@ -16,6 +17,7 @@
 
 		@media (max-width: 650px){
 			margin: 0 0 40px;
+			width: 100%;
 		}
 
 		&:last-child {
