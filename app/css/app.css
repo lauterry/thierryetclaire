@@ -498,6 +498,7 @@ input {
 @media (max-width: 650px) {
   #artisans .rows-item, #festivites .rows-item {
     width: 100%;
+    margin-bottom: 40px;
   }
 }
 
