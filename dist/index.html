@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thierry & Claire</title>
 
-    <link rel="stylesheet" href="css/58be7e24.ThierryEtClaire.css"/>
+    <link rel="stylesheet" href="css/7fbbadc1.ThierryEtClaire.css"/>
 
     <link href='https://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
@@ -17,7 +17,7 @@
 <div class="full-image-background">
 	<section class="hero">
 		<header class="hero-header">
-			<h1>Thierry & Claire</h1>
+			<h1 class="hero-header-title">Thierry & Claire</h1>
 			<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
 			<p class="date">13 Juin 2015</p>
 		</header>
@@ -32,7 +32,7 @@
 		<li class="nav-item">
 			<a class="nav-item-link" href="#festivites">Festivités</a>
 		</li>
-		<li class="nav-item">
+		<li class="nav-item logo">
 			<img class="nav-item-img" src="img/double-bonheur-white.png" alt=""/>
 		</li>
 		<li class="nav-item">
@@ -54,15 +54,15 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section class="rows-main">
+			<section class="rows-item">
 				<img class="avatar" src="img/claire-1.jpg" alt=""/>
 				<h1>Claire Poisblaud</h1>
-				<p class="rows-text"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo impedit maxime nulla, officiis quibusdam quod reprehenderit tenetur! Ab aliquid assumenda cumque debitis dolores eaque eveniet natus praesentium sunt tenetur.</span></p>
+				<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo impedit maxime nulla, officiis quibusdam quod reprehenderit tenetur! Ab aliquid assumenda cumque debitis dolores eaque eveniet natus praesentium sunt tenetur.</span></p>
 			</section>
-			<section class="rows-secondary">
+			<section class="rows-item">
 				<img class="avatar" src="img/thierry-2.jpg" alt=""/>
 				<h1>Thierry Lau</h1>
-				<p class="rows-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem dolorem dolorum exercitationem facilis fugiat fugit, inventore magnam magni modi nobis nostrum numquam omnis quae quibusdam quos sint temporibus vitae?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem dolorem dolorum exercitationem facilis fugiat fugit, inventore magnam magni modi nobis nostrum numquam omnis quae quibusdam quos sint temporibus vitae?</p>
 			</section>
 		</section>
 	</section>
@@ -78,23 +78,21 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section ng-repeat="step in steps">
-				<div class="card">
-					<img class="card-img" ng-src="{{::step.image}}" alt=""/>
-					<div class="card-body">
-						<h1 class="card-title">{{::step.name}}</h1>
-						<p class="time">{{::step.when.time}}</p>
-						<div class="card-text">
-							<div class="address">
-								<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
-								<p class="address-text">{{::step.location.address1}}</p>
-								<p class="address-text">{{::step.location.address2}}</p>
-								<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
-							</div>
+			<div class="rows-item card" ng-repeat="step in steps">
+				<img class="card-img" ng-src="{{::step.image}}" alt=""/>
+				<div class="card-body">
+					<h1 class="card-title">{{::step.name}}</h1>
+					<p class="time">{{::step.when.time}}</p>
+					<div class="card-text">
+						<div class="address">
+							<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
+							<p class="address-text">{{::step.location.address1}}</p>
+							<p class="address-text">{{::step.location.address2}}</p>
+							<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</section>
 	</section>
 </section>
@@ -222,40 +220,38 @@
 	</header>
 
 	<section class="block-body">
-		<section class="columns">
-			<section class="rows">
-				<section class="rows-item">
-					<div class="card-avatar-top">
-						<img class="card-avatar-top-image_small" src="img/mennesson.jpg" alt=""/>
-						<h1 class="card-avatar-top-title_small" >Studio Mennesson</h1>
-						<p class="card-avatar-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi dolorem hic necessitatibus quidem veniam!</p>
-						<a class="card-avatar-top-link" href="http://www.studiomennesson.fr/">En savoir plus</a>
-					</div>
-				</section>
-				<section class="rows-item">
-					<div class="card-avatar">
-						<img class="card-avatar-top-image_small" src="img/dj-sonorisation.jpg" alt=""/>
-						<h1 class="card-avatar-top-title_small" >DJ sonorisation</h1>
-						<p class="card-avatar-top-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolorem doloremque iste libero magni reprehenderit!</p>
-						<a class="card-avatar-top-link" href="http://www.dj-sonorisation.fr//">En savoir plus</a>
-					</div>
-				</section>
-				<section class="rows-item">
-					<div class="card-avatar-top">
-						<img class="card-avatar-top-image_small" src="img/dugourd-traiteur.jpg" alt=""/>
-						<h1 class="card-avatar-top-title_small" >Dugourd Traiteur</h1>
-						<p class="card-avatar-top-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eius maxime praesentium quibusdam reiciendis soluta.</p>
-						<a class="card-avatar-top-link" href="http://www.dugourdtraiteur.com/">En savoir plus</a>
-					</div>
-				</section>
-				<section class="rows-item">
-					<div class="card-avatar-top">
-						<img class="card-avatar-top-image_small" src="img/vilmart-people.jpg" alt=""/>
-						<h1 class="card-avatar-top-title_small" >Champagne Vilmart</h1>
-						<p class="card-avatar-top-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias animi ex maiores nostrum sit?</p>
-						<a class="card-avatar-top-link" href="http://www.champagnevilmart.fr/">En savoir plus</a>
-					</div>
-				</section>
+		<section class="rows">
+			<section class="rows-item">
+				<div class="card-avatar-top">
+					<img class="card-avatar-top-image_small" src="img/mennesson.jpg" alt=""/>
+					<h1 class="card-avatar-top-title_small" >Studio Mennesson</h1>
+					<p class="card-avatar-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci commodi dolorem hic necessitatibus quidem veniam!</p>
+					<a class="card-avatar-top-link" href="http://www.studiomennesson.fr/">En savoir plus</a>
+				</div>
+			</section>
+			<section class="rows-item">
+				<div class="card-avatar">
+					<img class="card-avatar-top-image_small" src="img/dj-sonorisation.jpg" alt=""/>
+					<h1 class="card-avatar-top-title_small" >DJ sonorisation</h1>
+					<p class="card-avatar-top-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolorem doloremque iste libero magni reprehenderit!</p>
+					<a class="card-avatar-top-link" href="http://www.dj-sonorisation.fr//">En savoir plus</a>
+				</div>
+			</section>
+			<section class="rows-item">
+				<div class="card-avatar-top">
+					<img class="card-avatar-top-image_small" src="img/dugourd-traiteur.jpg" alt=""/>
+					<h1 class="card-avatar-top-title_small" >Dugourd Traiteur</h1>
+					<p class="card-avatar-top-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet eius maxime praesentium quibusdam reiciendis soluta.</p>
+					<a class="card-avatar-top-link" href="http://www.dugourdtraiteur.com/">En savoir plus</a>
+				</div>
+			</section>
+			<section class="rows-item">
+				<div class="card-avatar-top">
+					<img class="card-avatar-top-image_small" src="img/vilmart-people.jpg" alt=""/>
+					<h1 class="card-avatar-top-title_small" >Champagne Vilmart</h1>
+					<p class="card-avatar-top-text_small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias animi ex maiores nostrum sit?</p>
+					<a class="card-avatar-top-link" href="http://www.champagnevilmart.fr/">En savoir plus</a>
+				</div>
 			</section>
 		</section>
 	</section>
