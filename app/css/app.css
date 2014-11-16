@@ -90,23 +90,6 @@ input {
   align-items: stretch;
   text-align: center;
 }
-@media (max-width: 650px) {
-  .rows {
-    flex-direction: column;
-  }
-}
-.rows-item {
-  margin: 0 50px 20px 0;
-}
-@media (max-width: 650px) {
-  .rows-item {
-    margin: 0 0 40px;
-    width: 100%;
-  }
-}
-.rows-item:last-child {
-  margin-right: 0;
-}
 .rows-text {
   margin: 0 80px;
 }
