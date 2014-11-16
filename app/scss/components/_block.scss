@@ -26,10 +26,16 @@
 
 	&-form {
 		background-color: $red;
-		width: 350px;
+		width: 450px;
 		color: $white;
 		padding: 20px 50px;
 		border-radius: 5px;
+		box-sizing: border-box;
+
+		@media (max-width: 650px){
+			width: 100%;
+			padding: 20px 30px;
+		}
 
 		.separator {
 			@include separator($white, 40px, 5px);

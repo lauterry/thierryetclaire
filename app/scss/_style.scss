@@ -44,6 +44,12 @@
 		position: absolute;
 		right: 40px;
 		top: 90px;
+
+		@media (max-width: 650px){
+			position: initial;
+			right: initial;
+			margin: 0 20px;
+		}
 	}
 }
 

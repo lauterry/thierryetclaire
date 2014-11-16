@@ -204,10 +204,17 @@ input {
 }
 .block-form {
   background-color: #962C42;
-  width: 350px;
+  width: 450px;
   color: #fff;
   padding: 20px 50px;
   border-radius: 5px;
+  box-sizing: border-box;
+}
+@media (max-width: 650px) {
+  .block-form {
+    width: 100%;
+    padding: 20px 30px;
+  }
 }
 .block-form .separator {
   color: #fff;
@@ -384,12 +391,22 @@ input {
   transition: transform 0.6s;
   position: relative;
 }
+@media (max-width: 650px) {
+  .flip-card {
+    width: 100%;
+  }
+}
 .flip-card-item {
   width: 450px;
   height: 646px;
   backface-visibility: hidden;
   transition: 0.6s;
   transform-style: preserve-3d;
+}
+@media (max-width: 650px) {
+  .flip-card-item {
+    width: 100%;
+  }
 }
 .flip-card-item.front {
   position: absolute;
@@ -485,6 +502,13 @@ input {
   position: absolute;
   right: 40px;
   top: 90px;
+}
+@media (max-width: 650px) {
+  .block.lifou > .flip-container {
+    position: initial;
+    right: initial;
+    margin: 0 20px;
+  }
 }
 
 #artisans .rows-item, #festivites .rows-item {

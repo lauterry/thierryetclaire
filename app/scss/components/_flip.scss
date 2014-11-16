@@ -13,12 +13,20 @@
 		transition: transform 0.6s;
 		position: relative;
 
+		@media (max-width: 650px){
+			width: 100%
+		}
+
 		&-item {
 			width: 450px;
 			height: 646px;
 			backface-visibility: hidden;
 			transition: 0.6s;
 			transform-style: preserve-3d;
+
+			@media (max-width: 650px){
+				width: 100%
+			}
 
 			&.front {
 				position: absolute;
