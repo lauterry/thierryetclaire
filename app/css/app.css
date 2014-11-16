@@ -90,9 +90,6 @@ input {
   align-items: stretch;
   text-align: center;
 }
-.rows-text {
-  margin: 0 80px;
-}
 
 .columns {
   display: flex;
@@ -501,6 +498,16 @@ input {
 @media (max-width: 650px) {
   #artisans .rows-item, #festivites .rows-item {
     width: 100%;
+  }
+}
+
+#nous .rows-item {
+  width: 45%;
+}
+@media (max-width: 650px) {
+  #nous .rows-item {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
