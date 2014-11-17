@@ -526,11 +526,11 @@ input {
   }
 }
 
-#nous .rows-item {
+#nous .rows-item, #temoins .rows-item {
   width: 45%;
 }
 @media (max-width: 650px) {
-  #nous .rows-item {
+  #nous .rows-item, #temoins .rows-item {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -543,6 +543,12 @@ input {
   transition: box-shadow .25s ease;
   float: right;
   margin-left: 40px;
+}
+@media (max-width: 650px) {
+  .card-avatar-right-image {
+    float: initial;
+    margin: 0;
+  }
 }
 .card-avatar-right-image:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -558,6 +564,11 @@ input {
 }
 .card-avatar-right-title, .card-avatar-right-text, .card-avatar-right-link {
   text-align: right;
+}
+@media (max-width: 650px) {
+  .card-avatar-right-title, .card-avatar-right-text, .card-avatar-right-link {
+    text-align: center;
+  }
 }
 .card-avatar-right-title_small {
   font-size: 1.5em;
@@ -577,6 +588,12 @@ input {
   float: left;
   margin-right: 40px;
 }
+@media (max-width: 650px) {
+  .card-avatar-left-image {
+    float: initial;
+    margin: 0;
+  }
+}
 .card-avatar-left-image:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -591,6 +608,11 @@ input {
 }
 .card-avatar-left-title, .card-avatar-left-text, .card-avatar-left-link {
   text-align: left;
+}
+@media (max-width: 650px) {
+  .card-avatar-left-title, .card-avatar-left-text, .card-avatar-left-link {
+    text-align: center;
+  }
 }
 .card-avatar-left-title_small {
   font-size: 1.5em;
@@ -608,6 +630,12 @@ input {
   border: 2px solid #fff;
   transition: box-shadow .25s ease;
 }
+@media (max-width: 650px) {
+  .card-avatar-top-image {
+    float: initial;
+    margin: 0;
+  }
+}
 .card-avatar-top-image:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -619,6 +647,11 @@ input {
 }
 .card-avatar-top-image_small:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+@media (max-width: 650px) {
+  .card-avatar-top-title, .card-avatar-top-text, .card-avatar-top-link {
+    text-align: center;
+  }
 }
 .card-avatar-top-title_small {
   font-size: 1.5em;
