@@ -48,8 +48,8 @@ input {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?ybtew9");
-  src: url("../fonts/icomoon.eot?#iefixybtew9") format("embedded-opentype"), url("../fonts/icomoon.woff?ybtew9") format("woff"), url("../fonts/icomoon.ttf?ybtew9") format("truetype"), url("../fonts/icomoon.svg?ybtew9#icomoon") format("svg");
+  src: url("../../../fonts/icomoon.eot?ybtew9");
+  src: url("../../../fonts/icomoon.eot?#iefixybtew9") format("embedded-opentype"), url("../../../fonts/icomoon.woff?ybtew9") format("woff"), url("../../../fonts/icomoon.ttf?ybtew9") format("truetype"), url("../../../fonts/icomoon.svg?ybtew9#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }

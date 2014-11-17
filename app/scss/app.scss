@@ -1,20 +1,7 @@
-@import "globals";
-@import "reset";
-@import "fonts";
+@import "base/project/_project";
 
-@import "mixins/separator";
-@import "mixins/button";
-@import "mixins/full-image-background";
-@import "mixins/mediaqueries";
+@import "base/utils/_utils";
 
-@import "components/rows";
-@import "components/columns";
-@import "components/navbar";
-@import "components/block";
-@import "components/hero";
-@import "components/avatar";
-@import "components/card";
-@import "components/controls";
-@import "components/flip";
+@import "components/_components";
 
-@import "style";
+@import "specifics/style";
