@@ -37,13 +37,11 @@
 }
 
 .block.lifou {
-	position: relative;
 	height: 700px;
 
 	> .flip-container {
 		position: absolute;
 		right: 40px;
-		top: 90px;
 
 		@media (max-width: 650px){
 			position: initial;

@@ -495,13 +495,11 @@ input {
 }
 
 .block.lifou {
-  position: relative;
   height: 700px;
 }
 .block.lifou > .flip-container {
   position: absolute;
   right: 40px;
-  top: 90px;
 }
 @media (max-width: 650px) {
   .block.lifou > .flip-container {

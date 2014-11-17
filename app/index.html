@@ -52,7 +52,7 @@
 <!--section.block>header.block-header>h1{Festivités}+p.separator>span.separator-line+i.icon-heart+span.separator-line-->
 
 <section class="block" id="nous">
-	<header class="block-header">
+	<header class="block-header" data-sr="enter from top and move 50px over 0.8s">
 		<h1>Nous</h1>
 		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span class="separator-line"></span></p>
 	</header>
@@ -60,12 +60,12 @@
 	<section class="block-body">
 		<section class="rows">
 			<section class="rows-item">
-				<img class="avatar" src="img/claire-1.jpg" alt=""/>
+				<img class="avatar" src="img/claire-1.jpg" alt="" data-sr="enter from left and ease-in 80px over 1s"/>
 				<h1>Claire Poisblaud</h1>
 				<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo impedit maxime nulla, officiis quibusdam quod reprehenderit tenetur! Ab aliquid assumenda cumque debitis dolores eaque eveniet natus praesentium sunt tenetur.</span></p>
 			</section>
 			<section class="rows-item">
-				<img class="avatar" src="img/thierry-2.jpg" alt=""/>
+				<img class="avatar" src="img/thierry-2.jpg" alt="" data-sr="enter from right and ease-in 80px over 1s"/>
 				<h1>Thierry Lau</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem dolorem dolorum exercitationem facilis fugiat fugit, inventore magnam magni modi nobis nostrum numquam omnis quae quibusdam quos sint temporibus vitae?</p>
 			</section>
@@ -76,23 +76,67 @@
 <section class="block" ng-controller="programmeController" id="festivites">
 	<header class="block-header">
 		<h1>Festivités</h1>
-
 		<p class="separator"><span class="separator-line"></span><i class="icon-heart"></i><span
 			class="separator-line"></span></p>
 	</header>
 
 	<section class="block-body">
 		<section class="rows">
-			<div class="rows-item card" ng-repeat="step in steps">
-				<img class="card-img" ng-src="{{::step.image}}" alt=""/>
+			<div class="rows-item card" data-sr="enter from left and ease-in 50px over 1s">
+				<img class="card-img" ng-src="img/mairie-bezannes.jpg" alt="" src="img/mairie-bezannes.jpg">
 				<div class="card-body">
-					<h1 class="card-title">{{::step.name}}</h1>
-					<p class="time">{{::step.when.time}}</p>
+					<h1 class="card-title ng-binding">Cérémonie civile</h1>
+					<p class="time ng-binding">11H00</p>
 					<div class="card-text">
 						<div class="address">
-							<h1 class="address-title"><i class="icon-pin"></i>{{::step.location.name}}</h1>
-							<p class="address-text">{{::step.location.address1}}</p>
-							<p class="address-text">{{::step.location.address2}}</p>
+							<h1 class="address-title ng-binding"><i class="icon-pin"></i>Mairie de Bezannes</h1>
+							<p class="address-text ng-binding">Mairie, 1 Rue Source de Muire</p>
+							<p class="address-text ng-binding">51430 Bezannes</p>
+							<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+						</div>
+					</div>
+			</div>
+			</div>
+			<div class="rows-item card" data-sr="enter from top over 1s">
+				<img class="card-img" ng-src="img/eglise-bezannes.jpg" alt="" src="img/eglise-bezannes.jpg">
+				<div class="card-body">
+					<h1 class="card-title ng-binding">Cérémonie religieuse</h1>
+					<p class="time ng-binding">15H00</p>
+					<div class="card-text">
+						<div class="address">
+							<h1 class="address-title ng-binding"><i class="icon-pin"></i>Eglise Saint-Martin</h1>
+							<p class="address-text ng-binding">22 Rue de l'Ancien Château</p>
+							<p class="address-text ng-binding">51430 Bezannes</p>
+							<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rows-item card" data-sr="enter from top over 1s">
+				<img class="card-img" ng-src="img/vilmart.jpg" alt="" src="img/vilmart.jpg">
+				<div class="card-body">
+					<h1 class="card-title ng-binding">Vin d'Honneur</h1>
+					<p class="time ng-binding">16H00</p>
+					<div class="card-text">
+						<div class="address">
+							<h1 class="address-title ng-binding"><i class="icon-pin"></i>Salle des fêtes de Bezannes</h1>
+							<p class="address-text ng-binding">Mairie, 1 Rue Source de Muire</p>
+							<p class="address-text ng-binding">51430 Bezannes</p>
+							<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rows-item card" data-sr="enter from right and ease-in 50px over 1s">
+				<img class="card-img" ng-src="img/vilmart.jpg" alt="" src="img/vilmart.jpg">
+				<div class="card-body">
+					<h1 class="card-title ng-binding">Dîner de mariage</h1>
+					<p class="time ng-binding">20H00</p>
+					<div class="card-text">
+						<div class="address">
+							<h1 class="address-title ng-binding"><i class="icon-pin"></i>Maison Vilmart</h1>
+							<p class="address-text ng-binding">Mairie, 1 Rue Source de Muire</p>
+							<p class="address-text ng-binding">51430 Bezannes</p>
 							<button class="address-button" ng-click="launchItinerary(position, step.location)">Itinéraire</button>
 						</div>
 					</div>
@@ -112,14 +156,14 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from left and ease-in 50px over 1s">
 				<div class="card-avatar-right">
 					<img class="card-avatar-right-image" src="img/gaelle.jpg" alt=""/>
 					<h1 class="card-avatar-right-title" >Gaëlle Poisblaud</h1>
 					<p class="card-avatar-right-text">Grande soeur de Claire</p>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from right and ease-in 50px over 1s">
 				<div class="card-avatar-left">
 					<img class="card-avatar-left-image" src="img/william.jpg" alt=""/>
 					<h1 class="card-avatar-left-title" >William Lee</h1>
@@ -127,42 +171,42 @@
 				</div>
 			</section>
 
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from left and ease-in 50px over 1s">
 				<div class="card-avatar-right">
 					<img class="card-avatar-right-image" src="img/alexandre.jpg" alt=""/>
 					<h1 class="card-avatar-right-title" >Alex Poisblaud</h1>
 					<p class="card-avatar-right-text">Petit frère de Claire</p>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from right and ease-in 50px over 1s">
 				<div class="card-avatar-left">
 					<img class="card-avatar-left-image" src="img/keline.jpg" alt=""/>
 					<h1 class="card-avatar-left-title" >Kéline Lee</h1>
 					<p class="card-avatar-left-text">Cousine de Thierry et soeur de William</p>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from left and ease-in 50px over 1s">
 				<div class="card-avatar-right">
 					<img class="card-avatar-right-image" src="img/pauline.jpg" alt=""/>
 					<h1 class="card-avatar-right-title" >Pauline Delville</h1>
 					<p class="card-avatar-right-text">Meilleure amie de Claire</p>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from right and ease-in 50px over 1s">
 				<div class="card-avatar-left">
 					<img class="card-avatar-left-image" src="img/nelly.jpg" alt=""/>
 					<h1 class="card-avatar-left-title" >Nelly Lau</h1>
 					<p class="card-avatar-left-text">Petit soeur de Thierry, en couple avec Frédéric</p>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from left and ease-in 50px over 1s">
 				<div class="card-avatar-right">
 					<img class="card-avatar-right-image" src="img/pauline.jpg" alt=""/>
 					<h1 class="card-avatar-right-title" >Fanny Guizard</h1>
 					<p class="card-avatar-right-text">Belle cousine de Claire</p>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from right and ease-in 50px over 1s">
 				<div class="card-avatar-left">
 					<img class="card-avatar-left-image" src="img/fredo.jpg" alt=""/>
 					<h1 class="card-avatar-left-title" >Frédéric Osvalt</h1>
@@ -242,7 +286,7 @@
 
 	<section class="block-body">
 		<section class="rows">
-			<section class="rows-item">
+			<section class="rows-item" data-sr="enter from top and ease-in 50px over 1s">
 				<div class="card-avatar-top">
 					<img class="card-avatar-top-image_small" src="img/mennesson.jpg" alt=""/>
 					<h1 class="card-avatar-top-title_small" >Studio Mennesson</h1>
@@ -250,7 +294,7 @@
 					<a class="card-avatar-top-link" href="http://www.studiomennesson.fr/">En savoir plus</a>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="wait 0.25s then enter from top and ease-in 50px over 1s">
 				<div class="card-avatar">
 					<img class="card-avatar-top-image_small" src="img/dj-sonorisation.jpg" alt=""/>
 					<h1 class="card-avatar-top-title_small" >DJ sonorisation</h1>
@@ -258,7 +302,7 @@
 					<a class="card-avatar-top-link" href="http://www.dj-sonorisation.fr//">En savoir plus</a>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="wait 0.5s then enter from top and ease-in 50px over 1s">
 				<div class="card-avatar-top">
 					<img class="card-avatar-top-image_small" src="img/dugourd-traiteur.jpg" alt=""/>
 					<h1 class="card-avatar-top-title_small" >Dugourd Traiteur</h1>
@@ -266,7 +310,7 @@
 					<a class="card-avatar-top-link" href="http://www.dugourdtraiteur.com/">En savoir plus</a>
 				</div>
 			</section>
-			<section class="rows-item">
+			<section class="rows-item" data-sr="wait 0.75s then enter from top and ease-in 50px over 1s">
 				<div class="card-avatar-top">
 					<img class="card-avatar-top-image_small" src="img/vilmart-people.jpg" alt=""/>
 					<h1 class="card-avatar-top-title_small" >Champagne Vilmart</h1>
@@ -285,6 +329,7 @@
 <!-- build:js js/ThierryEtClaire.js -->
 <!-- bower:js -->
 <script src="vendor/jquery/dist/jquery.js"></script>
+<script src='vendor/scrollReveal.js/scrollReveal.js'></script>
 <script src="vendor/angular/angular.js"></script>
 <script src="vendor/underscore/underscore.js"></script>
 <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
