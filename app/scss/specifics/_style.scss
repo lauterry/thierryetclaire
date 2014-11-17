@@ -80,6 +80,12 @@
 	}
 }
 
+#temoins {
+	.rows-item {
+		margin-bottom : 40px;
+	}
+}
+
 @mixin card-avatar($orientation) {
 
 	&-image {
@@ -117,7 +123,6 @@
 	}
 
 	&-title, &-text, &-link {
-
 		@if $orientation == 'right' {
 			text-align: right;
 		} @else if $orientation == 'left'{
@@ -131,6 +136,7 @@
 	}
 
 	&-title {
+		padding-top: 60px;
 		&_small {
 			font-size: 1.5em;
 		}

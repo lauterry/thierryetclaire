@@ -536,6 +536,10 @@ input {
   }
 }
 
+#temoins .rows-item {
+  margin-bottom: 40px;
+}
+
 .card-avatar-right-image {
   height: 200px;
   border-radius: 500px;
@@ -569,6 +573,9 @@ input {
   .card-avatar-right-title, .card-avatar-right-text, .card-avatar-right-link {
     text-align: center;
   }
+}
+.card-avatar-right-title {
+  padding-top: 60px;
 }
 .card-avatar-right-title_small {
   font-size: 1.5em;
@@ -614,6 +621,9 @@ input {
     text-align: center;
   }
 }
+.card-avatar-left-title {
+  padding-top: 60px;
+}
 .card-avatar-left-title_small {
   font-size: 1.5em;
 }
@@ -652,6 +662,9 @@ input {
   .card-avatar-top-title, .card-avatar-top-text, .card-avatar-top-link {
     text-align: center;
   }
+}
+.card-avatar-top-title {
+  padding-top: 60px;
 }
 .card-avatar-top-title_small {
   font-size: 1.5em;
