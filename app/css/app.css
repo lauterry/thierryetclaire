@@ -451,6 +451,7 @@ input {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transform: translateZ(0);
   height: 800px;
 }
 @media (max-width: 950px) {
@@ -492,6 +493,7 @@ input {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  -webkit-transform: translateZ(0);
 }
 
 .block.lifou {
