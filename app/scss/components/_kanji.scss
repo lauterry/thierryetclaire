@@ -10,6 +10,11 @@
 .icon-kanji-white {
 	@include icon-kanji(70px);
 	background-image: url('../img/double-bonheur-white.png');
+
+	&__small {
+		@include icon-kanji(25px);
+		background-image: url('../img/double-bonheur-white.png');
+	}
 }
 
 .icon-kanji-red {

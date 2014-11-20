@@ -454,6 +454,15 @@ input {
   background-repeat: no-repeat;
   background-image: url("../img/double-bonheur-white.png");
 }
+.icon-kanji-white__small {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background-image: url("../img/double-bonheur.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-image: url("../img/double-bonheur-white.png");
+}
 
 .icon-kanji-red {
   display: inline-block;
