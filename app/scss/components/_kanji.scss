@@ -1,0 +1,18 @@
+@mixin icon-kanji($size) {
+	display: inline-block;
+	height: $size;
+	width: $size;
+	background-image: url('../img/double-bonheur.png');
+	background-size: $size;
+	background-repeat: no-repeat;
+}
+
+.icon-kanji-white {
+	@include icon-kanji(70px);
+	background-image: url('../img/double-bonheur-white.png');
+}
+
+.icon-kanji-red {
+	@include icon-kanji(25px);
+	background-image: url('../img/double-bonheur-red.png');
+}
