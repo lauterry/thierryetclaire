@@ -95,7 +95,8 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		var dest = destinationAddress.address1 + ' ' + destinationAddress.address2;
 
 		var source = sourceCoordinate.latitude + "," + sourceCoordinate.longitude;
-		$window.location.href = "http://maps.google.com/maps?saddr=" + source + '&daddr=' + dest;
+		$window.open("http://maps.google.com/maps?output=embed&saddr=" + source + '&daddr=' + dest, '_blank');
+
 
 	};
 });
