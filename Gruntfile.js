@@ -169,54 +169,12 @@ module.exports = function (grunt) {
 					}
 				]
 			}
-		},
-		karma: {
-			dev_unit: {
-				options: {
-					configFile: 'test/conf/unit-test-conf.js',
-					background: true,  // The background option will tell grunt to run karma in a child process so it doesn't block subsequent grunt tasks.
-					singleRun: false,
-					autoWatch: true,
-					reporters: ['progress']
-				}
-			},
-			dist_unit: {
-				options: {
-					configFile: 'test/conf/unit-test-conf.js',
-					background: false,
-					singleRun: true,
-					autoWatch: false,
-					reporters: ['progress', 'coverage'],
-					coverageReporter: {
-						type: 'html',
-						dir: '../reports/coverage'
-					}
-				}
-			},
-			e2e: {
-				options: {
-					configFile: 'test/conf/e2e-test-conf.js'
-				}
-			}
-		},
-		connect: {
-			test: {
-				options: {
-					port: 8887,
-					base: '<%= assetsDir %>',
-					keepalive: false,
-					livereload: false,
-					open: false
-				}
-			}
 		}
 	});
 
-	grunt.registerTask('dev', ['sass', 'browserSync', 'karma:dev_unit:start', 'watch']);
+	grunt.registerTask('dev', ['sass', 'browserSync', 'watch']);
 	grunt.registerTask('package', ['jshint', 'clean', 'useminPrepare', 'copy', 'concat', 'ngmin', 'uglify', 'sass', 'cssmin', 'rev', 'imagemin', 'usemin']);
-	grunt.registerTask('ci', ['package', 'connect:test', 'karma:dist_unit:start', 'karma:e2e']);
+	grunt.registerTask('ci', ['package']);
 	grunt.registerTask('ls', ['availabletasks']);
-	grunt.registerTask('test:e2e', ['connect:test', 'karma:e2e']);
-	grunt.registerTask('test:unit', ['karma:dist_unit:start']);
 
 };

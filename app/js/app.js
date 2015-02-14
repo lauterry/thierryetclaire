@@ -1,7 +1,7 @@
 /* jshint -W117*/
 /* jshint -W055*/
 
-angular.module('ThierryEtClaire', ['google-maps']);
+angular.module('ThierryEtClaire', ['uiGmapgoogle-maps']);
 
 angular.module('ThierryEtClaire').config(function ($httpProvider) {
 	"use strict";
