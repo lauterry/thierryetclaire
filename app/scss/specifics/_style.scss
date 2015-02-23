@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .full-image-background {
-	@include full-image-background('../img/claire-thierry-naomi.jpg');
+	@include full-image-background('../img/claire-thierry-naomi.min.jpg');
 	height: 800px;
 
 	@media (max-width: 950px){
