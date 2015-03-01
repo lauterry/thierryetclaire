@@ -89,6 +89,10 @@
 
 	.airbnb-searchbar {
 		margin-bottom : 20px;
+
+		input:not(:last-of-type) {
+			margin-right: 10px;
+		}
 	}
 
 	.airbnb-button {

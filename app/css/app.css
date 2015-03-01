@@ -572,6 +572,9 @@ input {
 #accomodation .airbnb-searchbar {
   margin-bottom: 20px;
 }
+#accomodation .airbnb-searchbar input:not(:last-of-type) {
+  margin-right: 10px;
+}
 #accomodation .airbnb-button {
   color: #fff;
   padding: 7px 18px;
