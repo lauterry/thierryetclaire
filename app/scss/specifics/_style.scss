@@ -82,6 +82,21 @@
 	}
 }
 
+#accomodation {
+	.airbnb-color {
+		color : #ff5a5f;
+	}
+
+	.airbnb-searchbar {
+		margin-bottom : 20px;
+	}
+
+	.airbnb-button {
+		@include button(#ff5a5f);
+		height: 50px;
+	}
+}
+
 #temoins {
 	.rows-item {
 		margin-bottom : 40px;

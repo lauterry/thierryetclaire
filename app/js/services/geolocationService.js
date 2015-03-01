@@ -1,4 +1,4 @@
-angular.module('ThierryEtClaire').service('geolocation', function ($window, $q) {
+angular.module('ThierryEtClaire').factory('geolocation', function ($window, $q) {
 	"use strict";
 
 	var isGeolocationSupported = function() {

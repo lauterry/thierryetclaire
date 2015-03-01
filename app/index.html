@@ -9,6 +9,8 @@
     <!-- build:css css/ThierryEtClaire.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="vendor/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="vendor/pickadate/lib/themes/default.css"/>
+	<link rel="stylesheet" href="vendor/pickadate/lib/themes/default.date.css"/>
     <!-- endbower -->
     <link rel="stylesheet" href="css/app.css"/>
     <!-- endbuild -->
@@ -159,6 +161,29 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+	</section>
+</section>
+
+<section class="block" id="accomodation" ng-controller="AccomodationController as accomodation">
+	<header class="block-header">
+		<h1>Se loger</h1>
+
+		<p class="separator"><span class="separator-line"></span><i class="icon-kanji-red"></i><span
+			class="separator-line"></span></p>
+	</header>
+	<section class="block-body">
+		<section class="rows">
+			<div class="rows-item">
+				<img src="img/airbnb-logo.png" alt=""/>
+				<p class="airbnb-color">Louez des logements uniques auprès d'hôtes à proximité de Bezannes</p>
+				<section class="airbnb-searchbar">
+					<input type="text" pickadate placeholder="Date d'arrivée" ng-model="accomodation.checkin"/>
+					<input type="text" pickadate placeholder="Date de départ" ng-model="accomodation.checkout"/>
+					<input type="text" placeholder="Nombre de personnes" ng-model="accomodation.guests"/>
+					<input type="submit" class="airbnb-button" value="Trouver un logement" ng-click="accomodation.searchAirBnb()"/>
+				</section>
 			</div>
 		</section>
 	</section>
@@ -361,6 +386,10 @@
 <!-- build:js js/ThierryEtClaire.js -->
 <!-- bower:js -->
 <script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/pickadate/lib/picker.js"></script>
+<script src="vendor/pickadate/lib/picker.date.js"></script>
+<script src="vendor/pickadate/lib/picker.time.js"></script>
+<script src="vendor/pickadate/lib/translations/fr_FR.js"></script>
 <script src="vendor/angular/angular.js"></script>
 <script src="vendor/underscore/underscore.js"></script>
 <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
@@ -369,8 +398,11 @@
 <script src="js/app.js"></script>
 <script src="js/services/geolocationService.js"></script>
 <script src="js/services/googleFormService.js"></script>
+<script src="js/services/airBnbService.js"></script>
+<script src="js/directives/pickadate/pickadate.js"></script>
 <script src="js/controllers/programmeController.js"></script>
 <script src="js/controllers/rsvpController.js"></script>
+<script src="js/controllers/accomodationController.js"></script>
 <!-- endbuild -->
 
 </body>

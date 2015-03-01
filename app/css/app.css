@@ -566,6 +566,26 @@ input {
   }
 }
 
+#accomodation .airbnb-color {
+  color: #ff5a5f;
+}
+#accomodation .airbnb-searchbar {
+  margin-bottom: 20px;
+}
+#accomodation .airbnb-button {
+  color: #fff;
+  padding: 7px 18px;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 3px;
+  border: 1px solid #ff5a5f;
+  background-color: #ff5a5f;
+  height: 50px;
+}
+#accomodation .airbnb-button:hover {
+  background-color: #ff4146;
+  border: 1px solid #ff4146;
+}
+
 #temoins .rows-item {
   margin-bottom: 40px;
 }
