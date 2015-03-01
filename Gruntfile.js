@@ -50,7 +50,8 @@ module.exports = function (grunt) {
 						src: [
 							'index.html',
 							'img/**',
-							'fonts/**'
+							'fonts/**',
+							'**/*.html'
 						]
 					}
 				]
