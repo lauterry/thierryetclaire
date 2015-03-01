@@ -159,30 +159,6 @@
 	</section>
 </section>
 
-<section class="block" id="accomodation" ng-controller="AccomodationController as accomodation">
-	<header class="block-header">
-		<h1>Se loger</h1>
-
-		<p class="separator"><span class="separator-line"></span><i class="icon-kanji-red"></i><span
-			class="separator-line"></span></p>
-	</header>
-	<section class="block-body">
-		<section class="rows">
-			<div class="rows-item">
-				<img src="img/airbnb-logo.png" alt=""/>
-				<p class="airbnb-color">Louez des logements uniques auprès d'hôtes à proximité de Bezannes</p>
-				<section class="airbnb-searchbar">
-					<input type="text" pickadate placeholder="Date d'arrivée" ng-model="accomodation.checkin"/>
-					<input type="text" pickadate placeholder="Date de départ" ng-model="accomodation.checkout"/>
-					<input type="text" placeholder="Nombre de personnes" ng-model="accomodation.guests"/>
-					<input type="submit" class="airbnb-button" value="Trouver un logement" ng-click="accomodation.searchAirBnb()"/>
-				</section>
-			</div>
-		</section>
-	</section>
-</section>
-
-
 <section class="block" id="temoins">
 	<header class="block-header" data-sr="enter from top and move 50px over 0.8s">
 		<h1>les Témoins</h1>
@@ -249,6 +225,28 @@
 					<p class="card-avatar-left-text">Beau frère de Thierry, en couple avec Nelly</p>
 				</div>
 			</section>
+		</section>
+	</section>
+</section>
+
+<section class="block" id="accomodation" ng-controller="AccomodationController as accomodation">
+	<header class="block-header">
+		<h1>Se loger</h1>
+		<p class="separator"><span class="separator-line"></span><i class="icon-kanji-red"></i><span
+			class="separator-line"></span></p>
+	</header>
+	<section class="block-body">
+		<section class="rows">
+			<div class="rows-item">
+				<img src="img/airbnb-logo.png" alt=""/>
+				<p class="airbnb-color">Louez des logements uniques auprès d'hôtes à proximité de Bezannes</p>
+				<section class="airbnb-searchbar">
+					<input type="text" pickadate placeholder="Date d'arrivée" ng-model="accomodation.checkin"/>
+					<input type="text" pickadate placeholder="Date de départ" ng-model="accomodation.checkout"/>
+					<input type="text" placeholder="Nombre de personnes" ng-model="accomodation.guests"/>
+					<input type="submit" class="airbnb-button" value="Trouver un logement" ng-click="accomodation.searchAirBnb()"/>
+				</section>
+			</div>
 		</section>
 	</section>
 </section>
