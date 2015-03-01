@@ -71,6 +71,10 @@
 	.rows-item {
 		width: 45%;
 
+		a {
+			color: #196EAB;
+		}
+
 		@media (max-width: 650px){
 			width: 100%;
 			margin-bottom: 20px;
