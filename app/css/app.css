@@ -556,6 +556,9 @@ input {
 #nous .rows-item, #temoins .rows-item {
   width: 45%;
 }
+#nous .rows-item a, #temoins .rows-item a {
+  color: #196EAB;
+}
 @media (max-width: 650px) {
   #nous .rows-item, #temoins .rows-item {
     width: 100%;
