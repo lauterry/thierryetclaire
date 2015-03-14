@@ -66,12 +66,12 @@ angular.module('ThierryEtClaire').controller('programmeController', function ($s
 		text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem esse et, laborum libero numquam odit omnis pariatur totam veritatis voluptatum. Aliquid cumque eligendi est et inventore laboriosam, numquam odit veniam?",
 		location : {
 			name: "Maison Vilmart",
-			address1: "Mairie, 1 Rue Source de Muire",
-			address2: "51430 Bezannes",
+			address1: "5 rue Gravière",
+			address2: "51500 Rilly-La-Montagne",
 			map : {
 				center : {
-					latitude: 49.2201195,
-					longitude: 3.9859497
+					latitude: 49.164858,
+					longitude: 4.043755
 				},
 				zoom: 16
 			}
