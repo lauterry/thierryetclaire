@@ -185,3 +185,8 @@
 .card-avatar-top {
 	@include card-avatar('top');
 }
+
+.poetry {
+	font-style: italic;
+	font-size: 0.9rem;
+}

@@ -729,4 +729,9 @@ input {
   display: block;
 }
 
+.poetry {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
 /*# sourceMappingURL=app.css.map */
